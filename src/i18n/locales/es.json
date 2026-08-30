@@ -67,21 +67,22 @@
       "scale_sub": "desde el primer día"
     },
     "team_title": "El Equipo",
+    "team_intro": "Somos tres. Combinamos desarrollo de software, integración de IA y producto digital. Trabajamos juntos en cada proyecto — no hay cuentas aisladas ni interlocutores distintos según lo que necesites.",
     "team": {
       "architect": {
         "name": "Moicho",
         "role": "Fundador — Desarrollo de Software",
-        "bio": "Más de cuatro años construyendo aplicaciones digitales para empresas de distintos sectores. Especializado en diseñar sistemas que escalan con el negocio sin complicar la operación. Le obsesiona que el software sea útil, no solo funcional."
+        "bio": "Lleva más de cuatro años construyendo aplicaciones para empresas de distintos sectores. En el equipo es quien traduce el problema del cliente en arquitectura y código que funciona."
       },
       "ai": {
         "name": "A.R.",
         "role": "IA Aplicada y Automatización",
-        "bio": "Lleva años trabajando en cómo integrar inteligencia artificial en procesos de negocio reales. Su foco es el impacto medible: no monta demos impresionantes que luego no funcionan en producción. Formación continua en las herramientas y modelos más actuales."
+        "bio": "Especializado en integrar inteligencia artificial en procesos de negocio reales. Su criterio en el equipo es claro: si la IA no aporta valor medible, no la usamos."
       },
       "fullstack": {
         "name": "V.M.",
         "role": "Desarrollo y Producto Digital",
-        "bio": "Cuatro años desarrollando productos digitales desde la idea hasta el lanzamiento. Ha trabajado con equipos de distintos tamaños y sectores, siempre con foco en que la solución sea usable y que el cliente entienda lo que está pagando."
+        "bio": "Con foco en que la solución sea usable desde el primer día. En el equipo garantiza que lo que construimos tenga sentido para quien lo va a usar, no solo para quien lo pide."
       }
     }
   },

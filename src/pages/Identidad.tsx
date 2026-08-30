@@ -82,23 +82,30 @@ export default function Identidad() {
       {/* Equipo — tarjeta única */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-black text-black mb-8">{t('identity.team_title')}</h2>
           <div className="border border-black/10">
-            {TEAM_MEMBERS.map(({ nameKey, roleKey, bioKey, initials }, idx) => (
-              <div
-                key={nameKey}
-                className={`flex flex-col sm:flex-row gap-6 p-8 ${idx > 0 ? 'border-t border-black/10' : ''}`}
-              >
-                <div className="w-14 h-14 bg-black flex items-center justify-center shrink-0">
-                  <span className="text-white text-sm font-black">{initials}</span>
+            {/* Cabecera de la card */}
+            <div className="p-8 border-b border-black/10">
+              <h2 className="text-3xl font-black text-black">{t('identity.team_title')}</h2>
+              <p className="mt-3 text-gray-600 leading-relaxed max-w-2xl text-sm">{t('identity.team_intro')}</p>
+            </div>
+
+            {/* Miembros */}
+            <div className="divide-y divide-black/10">
+              {TEAM_MEMBERS.map(({ nameKey, roleKey, bioKey, initials }) => (
+                <div key={nameKey} className="flex items-start gap-5 px-8 py-6">
+                  <div className="w-10 h-10 bg-black flex items-center justify-center shrink-0">
+                    <span className="text-white text-xs font-black">{initials}</span>
+                  </div>
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:gap-8 flex-1 min-w-0">
+                    <div className="shrink-0 sm:w-52">
+                      <p className="font-black text-black text-sm">{t(nameKey)}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{t(roleKey)}</p>
+                    </div>
+                    <p className="mt-2 sm:mt-0 text-sm text-gray-600 leading-relaxed">{t(bioKey)}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-base font-black text-black">{t(nameKey)}</h3>
-                  <p className="text-xs font-semibold uppercase tracking-widest text-gray-500 mt-0.5">{t(roleKey)}</p>
-                  <p className="mt-3 text-sm text-gray-700 leading-relaxed max-w-2xl">{t(bioKey)}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
