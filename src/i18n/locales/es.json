@@ -51,23 +51,23 @@
     "email_label": "O escríbenos directamente a"
   },
   "identity": {
-    "section_title": "Quiénes somos",
+    "section_title": "Sin letra pequeña",
     "narrative_title": "Por qué existe ONBO",
-    "narrative_body": "Creamos ONBO porque vimos demasiadas empresas atrapadas entre dos opciones: soluciones genéricas que no encajan del todo, o presupuestos de agencia que no se pueden permitir. Somos un equipo técnico pequeño, directo y honesto. No prometemos lo que no podemos cumplir. Y cuando decimos que algo no tiene sentido para tu negocio, te lo decimos.",
-    "quote": "\"La mejor tecnología es la que el usuario no tiene que pensar. Nosotros nos encargamos de esa parte.\"",
+    "narrative_body": "Llevamos años viendo el mismo problema: las empresas medianas y pequeñas tienen que elegir entre herramientas genéricas que no encajan del todo, o presupuestos de agencia que no se pueden permitir. Ninguna de las dos opciones es la correcta.\n\nFundamos ONBO para ser la tercera vía: capacidad técnica real, trato directo y precios que tienen sentido. No tenemos comerciales que venden y luego pasan el encargo. Quien te atiende es quien construye. Y si algo no te conviene, te lo decimos antes de firmar nada.",
+    "quote": "\"Construimos tecnología para que puedas centrarte en lo que sabes hacer. Nosotros nos encargamos de que funcione.\"",
     "quote_author": "Equipo ONBO Solutions",
     "values": {
-      "security_title": "Honestidad",
-      "security_sub": "ante todo",
-      "ai_title": "IA",
-      "ai_sub": "aplicada, no de adorno",
-      "software_title": "Software",
-      "software_sub": "a tu medida",
-      "scale_title": "Resultados",
-      "scale_sub": "desde el primer día"
+      "v1_title": "Honestidad ante todo",
+      "v1_desc": "Si no podemos hacerlo, o no tiene sentido para tu negocio, te lo decimos. Antes de presupuestarte nada.",
+      "v2_title": "IA donde aporta, no donde queda bien",
+      "v2_desc": "Solo usamos inteligencia artificial cuando genera un impacto real y medible en tu operación.",
+      "v3_title": "Software pensado para ti",
+      "v3_desc": "Construimos para cómo trabaja tu empresa, no para cómo trabajan otras.",
+      "v4_title": "Resultados desde la primera entrega",
+      "v4_desc": "Trabajamos en fases cortas. Ves avances en semanas, no esperas meses para ver algo."
     },
     "team_title": "El Equipo",
-    "team_intro": "Somos un equipo técnico pequeño que combina desarrollo de software, integración de IA y producto digital. Trabajamos juntos en cada proyecto: no hay cuentas aisladas ni interlocutores distintos según lo que necesites. Cuando nos contratas, trabajas con el equipo completo.",
+    "team_intro": "Cuando nos contratas, no hablas con un comercial que luego pasa el encargo. Hablas directamente con quien va a construirlo. Somos un equipo técnico que cubre desarrollo de software, integración de IA y producto digital — y trabajamos juntos en cada proyecto, de principio a fin.",
     "team": {
       "architect": {
         "name": "Moicho",

@@ -1,73 +1,68 @@
 import { useTranslation } from 'react-i18next'
 
 const VALUES = [
-  'Honestidad ante todo',
-  'IA aplicada, no de adorno',
-  'Software a tu medida',
-  'Resultados desde el primer día',
+  { titleKey: 'identity.values.v1_title', descKey: 'identity.values.v1_desc' },
+  { titleKey: 'identity.values.v2_title', descKey: 'identity.values.v2_desc' },
+  { titleKey: 'identity.values.v3_title', descKey: 'identity.values.v3_desc' },
+  { titleKey: 'identity.values.v4_title', descKey: 'identity.values.v4_desc' },
 ] as const
-
 
 export default function Identidad() {
   const { t } = useTranslation()
 
+  const narrativeParagraphs = t('identity.narrative_body').split('\n\n')
+
   return (
     <main>
-      {/* Bloque narrativo */}
-      <section className="py-20 bg-white">
+      {/* Hero de sección */}
+      <section className="py-20 bg-white border-b border-black/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-black text-black mb-12">{t('identity.section_title')}</h1>
-          <div className="border border-black/10 p-8 lg:p-12 max-w-3xl">
-            <h2 className="text-2xl font-black text-black">{t('identity.narrative_title')}</h2>
-            <p className="mt-6 text-gray-700 leading-relaxed">{t('identity.narrative_body')}</p>
-          </div>
+          <p className="text-xs uppercase tracking-widest text-gray-400 mb-4">
+            {t('nav.identity')}
+          </p>
+          <h1 className="text-5xl lg:text-6xl font-black text-black leading-tight max-w-xl">
+            {t('identity.section_title')}
+          </h1>
         </div>
       </section>
 
-      {/* Cita */}
-      <section className="bg-black text-white py-20">
+      {/* Narrativa */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-12 items-center">
-            <div className="flex-1">
-              <blockquote className="text-2xl lg:text-3xl font-black leading-tight">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <h2 className="text-2xl font-black text-black">{t('identity.narrative_title')}</h2>
+              <div className="mt-6 space-y-4">
+                {narrativeParagraphs.map((p, i) => (
+                  <p key={i} className="text-gray-700 leading-relaxed">{p}</p>
+                ))}
+              </div>
+            </div>
+            {/* Cita */}
+            <div className="bg-black text-white p-10">
+              <blockquote className="text-xl font-black leading-snug">
                 {t('identity.quote')}
               </blockquote>
               <cite className="mt-6 block text-sm text-gray-400 not-italic">
                 — {t('identity.quote_author')}
               </cite>
             </div>
-            <div className="lg:w-72 h-48 lg:h-64 relative overflow-hidden shrink-0" aria-hidden="true">
-              <svg viewBox="0 0 288 256" className="w-full h-full">
-                <defs>
-                  <linearGradient id="tunnel" x1="50%" y1="0%" x2="50%" y2="100%">
-                    <stop offset="0%" stopColor="#ffffff" stopOpacity="0.05" />
-                    <stop offset="100%" stopColor="#ffffff" stopOpacity="0.3" />
-                  </linearGradient>
-                </defs>
-                {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-                  <rect
-                    key={i}
-                    x={i * 16} y={i * 14}
-                    width={288 - i * 32} height={256 - i * 28}
-                    fill="none" stroke="white" strokeWidth="0.5" strokeOpacity={0.15 + i * 0.06}
-                  />
-                ))}
-                <circle cx="144" cy="128" r="20" fill="white" fillOpacity="0.1" />
-                <circle cx="144" cy="128" r="10" fill="white" fillOpacity="0.2" />
-              </svg>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Valores */}
-      <section className="bg-black text-white py-12 border-t border-white/10">
+      <section className="bg-black text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:flex-wrap gap-x-12 gap-y-4">
-            {VALUES.map((v, i) => (
-              <div key={v} className="flex items-center gap-3 text-sm">
-                <span className="text-gray-600 font-mono text-xs">0{i + 1}</span>
-                <span className="font-semibold text-white">{v}</span>
+          <p className="text-xs uppercase tracking-widest text-gray-500 mb-10">
+            Cómo trabajamos
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
+            {VALUES.map(({ titleKey, descKey }, i) => (
+              <div key={titleKey} className="bg-black p-8">
+                <span className="text-xs font-mono text-gray-600">0{i + 1}</span>
+                <p className="mt-3 font-black text-white text-base leading-tight">{t(titleKey)}</p>
+                <p className="mt-2 text-sm text-gray-400 leading-relaxed">{t(descKey)}</p>
               </div>
             ))}
           </div>
