@@ -5,7 +5,6 @@ import { Link, NavLink } from 'react-router-dom'
 
 const NAV_LINKS = [
   { to: '/', labelKey: 'nav.home' },
-  { to: '/guias', labelKey: 'nav.guides' },
   { to: '/identidad', labelKey: 'nav.identity' },
 ] as const
 
