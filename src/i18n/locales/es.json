@@ -17,14 +17,14 @@
     "section_title": "Qué hacemos",
     "dev": {
       "title": "Software a Medida",
-      "subtitle": "Resuelve el problema, no el de otro",
+      "subtitle": "Hecho para tu empresa, no para cualquiera",
       "body": "Construimos aplicaciones y herramientas digitales diseñadas exactamente para cómo trabaja tu empresa. Sin soluciones genéricas que obligan a adaptar tu negocio a la herramienta — lo hacemos al revés.",
       "cta": "Cuéntanos tu reto",
       "right_title": "Cómo trabajamos",
       "process1": "Primero escuchamos",
       "process1_desc": "Entendemos tu negocio antes de proponer nada.",
       "process2": "Resultados desde el inicio",
-      "process2_desc": "Entregas incrementales: ves avances desde la primera semana.",
+      "process2_desc": "Entregas incrementales: ves avances desde las primeras semanas.",
       "process3": "Sin sorpresas",
       "process3_desc": "Presupuesto cerrado y plazos reales desde el principio."
     },
@@ -46,7 +46,7 @@
     "subtitle": "Analizamos tu situación y te decimos con honestidad qué podemos hacer, cómo y en cuánto tiempo.",
     "pill1": "Sin coste inicial",
     "pill2": "Sin letra pequeña",
-    "pill3": "Respuesta en 24h",
+    "pill3": "Respuesta en 24/48h",
     "cta": "Cuéntanos tu proyecto",
     "email_label": "O escríbenos directamente a"
   },
@@ -101,9 +101,9 @@
   },
   "contact": {
     "section_title": "Hablemos",
-    "intro": "Cuéntanos qué necesitas. Te respondemos en menos de 24 horas con una valoración honesta de si podemos ayudarte y cómo.",
+    "intro": "Cuéntanos qué necesitas. Te respondemos en menos de 24/48 horas con una valoración honesta de si podemos ayudarte y cómo.",
     "location_label": "Ubicación",
-    "location_value": "España — Trabajo en remoto",
+    "location_value": "España — Sevilla",
     "email_label": "Email",
     "phone_label": "Teléfono",
     "privacy": "Política de privacidad",
@@ -118,7 +118,7 @@
       "message": "Cuéntanos tu situación",
       "submit": "Enviar mensaje",
       "sending": "Enviando...",
-      "success": "Mensaje recibido. Te respondemos en menos de 24h.",
+      "success": "Mensaje recibido. Te respondemos en menos de 24/48h.",
       "error": "Algo salió mal. Inténtalo de nuevo o escríbenos directamente."
     }
   },
