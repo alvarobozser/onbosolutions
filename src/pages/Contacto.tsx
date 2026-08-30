@@ -2,7 +2,10 @@ import { Mail, MapPin, Phone } from 'lucide-react'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import ContactForm from '../components/contacto/ContactForm'
+import Accordion from '../components/shared/Accordion'
 import { CONTACT_EMAIL, CONTACT_LOCATION, CONTACT_PHONE } from '../config/constants'
+
+const FAQ_KEYS = ['q1', 'q2', 'q3', 'q4', 'q5'] as const
 
 interface InfoItem {
   Icon: React.ComponentType<{ size: number; className: string }>
@@ -19,6 +22,11 @@ const INFO_ITEMS: InfoItem[] = [
 
 export default function Contacto() {
   const { t } = useTranslation()
+
+  const faqItems = FAQ_KEYS.map((key) => ({
+    question: t(`faq.${key}`),
+    answer: t(`faq.a${key.slice(1)}`),
+  }))
 
   return (
     <main className="py-20">
@@ -57,6 +65,16 @@ export default function Contacto() {
           {/* Form right */}
           <div className="flex-1 bg-black p-8 lg:p-12">
             <ContactForm />
+          </div>
+        </div>
+
+        {/* FAQ */}
+        <div className="mt-24 flex flex-col lg:flex-row gap-12">
+          <div className="lg:w-64 shrink-0">
+            <h2 className="text-2xl font-black text-black sticky top-24">{t('faq.section_title')}</h2>
+          </div>
+          <div className="flex-1 border-t border-black/10">
+            <Accordion items={faqItems} defaultOpenIndex={0} />
           </div>
         </div>
       </div>
