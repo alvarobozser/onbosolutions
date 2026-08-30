@@ -11,10 +11,8 @@ export default function Hero() {
   const [style, setStyle] = useState<React.CSSProperties>({})
 
   useEffect(() => {
-    let prev = performance.now()
-
     const tick = (now: number) => {
-      prev = now
+      void now
       const lerpFactor = 0.07
       tiltRef.current.x += (targetRef.current.x - tiltRef.current.x) * lerpFactor
       tiltRef.current.y += (targetRef.current.y - tiltRef.current.y) * lerpFactor
