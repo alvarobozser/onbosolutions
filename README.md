@@ -1,32 +1,44 @@
-# React + TypeScript + Vite
+# ONBO Solutions — Sitio Web Corporativo
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Stack
 
-Currently, two official plugins are available:
+- React 19 + Vite 8 + TypeScript (strict)
+- Tailwind CSS v4
+- react-router-dom v7 (HashRouter)
+- react-i18next — ES / EN
+- Package manager: **pnpm**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Desarrollo local
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+cp .env.example .env   # rellena las variables
+pnpm install
+pnpm dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Build
+
+```bash
+pnpm build
+pnpm preview
+```
+
+## Deploy — GitHub Pages
+
+El workflow `.github/workflows/deploy.yml` despliega automáticamente a GitHub Pages en cada push a `main`.
+
+**Configuración inicial:**
+1. Ve a **Settings → Pages → Source** y selecciona la rama `gh-pages`.
+2. Añade los secrets en **Settings → Secrets and variables → Actions**:
+
+| Secret | Descripción |
+|--------|-------------|
+| `VITE_WEB3FORMS_KEY` | Access key de [web3forms.com](https://web3forms.com) |
+
+## Variables de entorno
+
+Copia `.env.example` a `.env` y rellena los valores:
+
+```env
+VITE_WEB3FORMS_KEY=tu_key_aqui
+```
