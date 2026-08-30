@@ -20,7 +20,7 @@ function CardLeft({
       <p className="mt-4 text-gray-700 leading-relaxed">{body}</p>
       <div className="mt-8">
         <Link
-          to="/servicios"
+          to="/contacto"
           className="inline-flex items-center gap-2 border border-black text-black text-sm font-semibold px-5 py-2.5 hover:bg-black hover:text-white transition-colors"
         >
           {cta} →
