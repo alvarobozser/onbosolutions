@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "guides": "Guías",
+    "identity": "Identidad",
+    "contact": "Contacto",
+    "cta": "Contacto"
+  },
+  "hero": {
+    "title_line1": "Tecnología a medida que",
+    "title_line2": "convierte ideas en productos reales",
+    "cta_primary": "Cómo te ayudamos",
+    "cta_secondary": "Habla con nosotros"
+  },
+  "services": {
+    "section_title": "Nuestros Servicios",
+    "dev": {
+      "title": "Desarrollo a Medida",
+      "subtitle": "Software que encaja con tu negocio, no al revés",
+      "body": "Construimos aplicaciones web, APIs y sistemas backend adaptados exactamente a tus procesos. Sin plantillas, sin soluciones genéricas.",
+      "cta": "Ver servicio",
+      "right_title": "Casos de Éxito",
+      "case1_name": "Plataforma logística",
+      "case1_desc": "Reducción del 40% en tiempo de gestión de pedidos.",
+      "case2_name": "Portal de gestión medioambiental",
+      "case2_desc": "Modernización de sistema legacy con cero downtime."
+    },
+    "consulting": {
+      "title": "Consultoría de Transformación Digital e IA",
+      "subtitle": "Estrategia clara, implementación real",
+      "body": "Analizamos tus procesos, identificamos dónde la IA genera valor real y te acompañamos en la integración sin humo ni promesas vacías.",
+      "cta": "Ver servicio",
+      "right_title": "En Cifras",
+      "metric1": "< 24h informe entregado",
+      "metric2": "0€ compromiso de continuidad",
+      "metric3": "100% proyectos con ROI definido"
+    },
+    "innovation": {
+      "title": "Innovación y Financiación de Proyectos",
+      "subtitle": "Tu idea merece financiación",
+      "body": "Te ayudamos a identificar convocatorias públicas y privadas, preparamos la documentación técnica y gestionamos el proceso de principio a fin.",
+      "cta": "Ver convocatorias",
+      "right_title": "Respuesta garantizada",
+      "badge": "Respuesta en menos de 24h"
+    }
+  },
+  "cta_banner": {
+    "badge": "Respuesta en menos de 24h",
+    "title_line1": "¿Tienes un proyecto en mente?",
+    "title_line2": "Hablemos sin compromiso.",
+    "subtitle": "Te contamos exactamente qué podemos hacer y en cuánto tiempo.",
+    "pill1": "Consulta gratuita",
+    "pill2": "Sin compromiso",
+    "pill3": "Resultados reales",
+    "cta": "Cuéntanos tu proyecto",
+    "email_label": "O escríbenos directamente a"
+  },
+  "guides": {
+    "section_title": "Guías Prácticas",
+    "see_all": "Ver todas las guías",
+    "categories": {
+      "ia": "IA Aplicada",
+      "backend": "Backend",
+      "arquitectura": "Arquitectura",
+      "financiacion": "Financiación",
+      "digital": "Digital"
+    }
+  },
+  "identity": {
+    "section_title": "Identidad",
+    "narrative_title": "Origen, Visión y Ambición",
+    "narrative_body": "ONBO Solutions nació de la convicción de que la tecnología debe ser una herramienta honesta: sin promesas exageradas, sin soluciones de catálogo. Somos un equipo técnico que habla claro, construye con rigor y acompaña a empresas que quieren crecer de verdad en la era digital.",
+    "quote": "\"La mejor tecnología es la que el usuario no tiene que pensar. Nosotros nos encargamos de esa parte.\"",
+    "quote_author": "Equipo ONBO Solutions",
+    "values": {
+      "security_title": "Seguridad",
+      "security_sub": "por defecto",
+      "ai_title": "IA",
+      "ai_sub": "integrada",
+      "software_title": "Software",
+      "software_sub": "adaptado",
+      "scale_title": "Escalabilidad",
+      "scale_sub": "desde la base"
+    },
+    "team_title": "El Equipo",
+    "team": {
+      "architect": {
+        "name": "Moicho",
+        "role": "Arquitecto de Software Backend",
+        "bio": "Más de cuatro años diseñando sistemas backend con Java 21, Spring Boot y arquitectura hexagonal. Especializado en DDD, Apache Kafka y diseño API-First. Ha liderado equipos técnicos en remoto y liderado migraciones de sistemas legacy sin interrupciones."
+      },
+      "ai": {
+        "name": "A.R.",
+        "role": "Especialista en IA Aplicada",
+        "bio": "Experto en arquitecturas RAG, sistemas multi-agente y evaluación de modelos en producción. Formación activa en certificaciones de Anthropic. Ha desarrollado SaaS de generación de contenido con IA y explorado fine-tuning con QLoRA sobre modelos abiertos."
+      },
+      "fullstack": {
+        "name": "V.M.",
+        "role": "Ingeniero Full-Stack",
+        "bio": "Cuatro años de experiencia en desarrollo full-stack con Angular y Java Spring Boot. Ha construido aplicaciones para el sector público, plataformas de movilidad y herramientas de productividad. Certificado en metodologías SCRUM."
+      }
+    }
+  },
+  "faq": {
+    "section_title": "Lo que necesitas saber",
+    "q1": "¿Qué hace exactamente ONBO Solutions?",
+    "a1": "Desarrollamos software a medida, acompañamos procesos de transformación digital e integramos IA donde genera valor real. No vendemos productos de catálogo: analizamos tu caso y construimos la solución que necesitas.",
+    "q2": "¿Qué servicios ofrecéis?",
+    "a2": "Desarrollo backend y full-stack, consultoría de transformación digital e IA, e identificación y gestión de convocatorias de financiación para proyectos de innovación.",
+    "q3": "¿Cuánto cuesta un proyecto?",
+    "a3": "Depende del alcance. Ofrecemos una consulta gratuita donde analizamos tu situación y preparamos un presupuesto sin compromiso. La mayoría de proyectos arranca con un análisis técnico en menos de 24 horas.",
+    "q4": "¿Cuánto tiempo tarda un proyecto?",
+    "a4": "Un MVP funcional puede estar listo en 4–8 semanas. Los proyectos más complejos se planifican en fases para que puedas ver valor desde el primer sprint.",
+    "q5": "¿Dónde estáis ubicados?",
+    "a5": "Trabajamos en remoto desde España. Atendemos clientes de cualquier país hispanohablante y también en inglés."
+  },
+  "contact": {
+    "section_title": "Nuestro Contacto",
+    "intro": "Cuéntanos qué necesitas. Te respondemos en menos de 24 horas con un análisis honesto de cómo podemos ayudarte.",
+    "location_label": "Ubicación",
+    "location_value": "España — Trabajo en remoto",
+    "email_label": "Email",
+    "phone_label": "Teléfono",
+    "privacy": "Política de privacidad",
+    "form": {
+      "name": "Nombre",
+      "email": "Email",
+      "interest": "¿Qué te interesa?",
+      "interest_dev": "Desarrollo a medida",
+      "interest_consulting": "Consultoría de IA",
+      "interest_funding": "Financiación de proyectos",
+      "interest_other": "Otro",
+      "phone": "Teléfono (opcional)",
+      "message": "Mensaje",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando...",
+      "success": "Mensaje enviado. Te respondemos en menos de 24h.",
+      "error": "Algo salió mal. Inténtalo de nuevo o escríbenos directamente."
+    }
+  },
+  "footer": {
+    "tagline": "Tecnología honesta para empresas reales.",
+    "rights": "Todos los derechos reservados."
+  }
+}

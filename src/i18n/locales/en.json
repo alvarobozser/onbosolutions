@@ -1,0 +1,146 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "guides": "Guides",
+    "identity": "About",
+    "contact": "Contact",
+    "cta": "Contact"
+  },
+  "hero": {
+    "title_line1": "Custom technology that turns",
+    "title_line2": "ideas into real products",
+    "cta_primary": "How we help",
+    "cta_secondary": "Talk to us"
+  },
+  "services": {
+    "section_title": "Our Services",
+    "dev": {
+      "title": "Custom Development",
+      "subtitle": "Software that fits your business, not the other way around",
+      "body": "We build web applications, APIs and backend systems tailored exactly to your processes. No templates, no off-the-shelf solutions.",
+      "cta": "See service",
+      "right_title": "Success Stories",
+      "case1_name": "Logistics platform",
+      "case1_desc": "40% reduction in order management time.",
+      "case2_name": "Environmental management portal",
+      "case2_desc": "Legacy system modernisation with zero downtime."
+    },
+    "consulting": {
+      "title": "Digital Transformation & AI Consulting",
+      "subtitle": "Clear strategy, real implementation",
+      "body": "We analyse your processes, identify where AI creates real value, and support you through integration — no hype, no empty promises.",
+      "cta": "See service",
+      "right_title": "By the Numbers",
+      "metric1": "< 24h report delivered",
+      "metric2": "€0 continuity commitment",
+      "metric3": "100% projects with defined ROI"
+    },
+    "innovation": {
+      "title": "Innovation & Project Funding",
+      "subtitle": "Your idea deserves funding",
+      "body": "We help you identify public and private grant calls, prepare technical documentation, and manage the process from start to finish.",
+      "cta": "See grant calls",
+      "right_title": "Guaranteed response",
+      "badge": "Response in less than 24h"
+    }
+  },
+  "cta_banner": {
+    "badge": "Response in less than 24h",
+    "title_line1": "Got a project in mind?",
+    "title_line2": "Let's talk, no strings attached.",
+    "subtitle": "We'll tell you exactly what we can do and how long it will take.",
+    "pill1": "Free consultation",
+    "pill2": "No commitment",
+    "pill3": "Real results",
+    "cta": "Tell us about your project",
+    "email_label": "Or write us directly at"
+  },
+  "guides": {
+    "section_title": "Practical Guides",
+    "see_all": "See all guides",
+    "categories": {
+      "ia": "Applied AI",
+      "backend": "Backend",
+      "arquitectura": "Architecture",
+      "financiacion": "Funding",
+      "digital": "Digital"
+    }
+  },
+  "identity": {
+    "section_title": "About",
+    "narrative_title": "Origin, Vision & Ambition",
+    "narrative_body": "ONBO Solutions was born from the conviction that technology should be an honest tool: no exaggerated promises, no catalogue solutions. We are a technical team that speaks plainly, builds with rigour, and supports companies that want to grow for real in the digital era.",
+    "quote": "\"The best technology is the kind the user doesn't have to think about. That's our job.\"",
+    "quote_author": "ONBO Solutions Team",
+    "values": {
+      "security_title": "Security",
+      "security_sub": "by default",
+      "ai_title": "AI",
+      "ai_sub": "integrated",
+      "software_title": "Software",
+      "software_sub": "tailored",
+      "scale_title": "Scalability",
+      "scale_sub": "from the ground up"
+    },
+    "team_title": "The Team",
+    "team": {
+      "architect": {
+        "name": "Moicho",
+        "role": "Backend Software Architect",
+        "bio": "Over four years designing backend systems with Java 21, Spring Boot and hexagonal architecture. Specialised in DDD, Apache Kafka and API-First design. Has led remote technical teams and managed legacy system migrations with zero interruptions."
+      },
+      "ai": {
+        "name": "A.R.",
+        "role": "Applied AI Specialist",
+        "bio": "Expert in RAG architectures, multi-agent systems and production model evaluation. Actively pursuing Anthropic certifications. Has developed AI-powered content SaaS and explored fine-tuning with QLoRA on open models."
+      },
+      "fullstack": {
+        "name": "V.M.",
+        "role": "Full-Stack Engineer",
+        "bio": "Four years of full-stack experience with Angular and Java Spring Boot. Has built applications for the public sector, mobility platforms and productivity tools. Certified in SCRUM methodologies."
+      }
+    }
+  },
+  "faq": {
+    "section_title": "What you need to know",
+    "q1": "What does ONBO Solutions do exactly?",
+    "a1": "We develop custom software, support digital transformation processes and integrate AI where it creates real value. We don't sell catalogue products — we analyse your case and build the solution you need.",
+    "q2": "What services do you offer?",
+    "a2": "Backend and full-stack development, digital transformation and AI consulting, and identification and management of funding calls for innovation projects.",
+    "q3": "How much does a project cost?",
+    "a3": "It depends on the scope. We offer a free consultation where we analyse your situation and prepare a no-commitment quote. Most projects start with a technical analysis in under 24 hours.",
+    "q4": "How long does a project take?",
+    "a4": "A functional MVP can be ready in 4–8 weeks. More complex projects are planned in phases so you see value from the very first sprint.",
+    "q5": "Where are you based?",
+    "a5": "We work remotely from Spain. We serve clients from any Spanish-speaking country and also in English."
+  },
+  "contact": {
+    "section_title": "Get in Touch",
+    "intro": "Tell us what you need. We'll reply within 24 hours with an honest analysis of how we can help.",
+    "location_label": "Location",
+    "location_value": "Spain — Remote work",
+    "email_label": "Email",
+    "phone_label": "Phone",
+    "privacy": "Privacy policy",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "interest": "What are you interested in?",
+      "interest_dev": "Custom development",
+      "interest_consulting": "AI consulting",
+      "interest_funding": "Project funding",
+      "interest_other": "Other",
+      "phone": "Phone (optional)",
+      "message": "Message",
+      "submit": "Send message",
+      "sending": "Sending...",
+      "success": "Message sent. We'll reply within 24h.",
+      "error": "Something went wrong. Please try again or write to us directly."
+    }
+  },
+  "footer": {
+    "tagline": "Honest technology for real businesses.",
+    "rights": "All rights reserved."
+  }
+}
