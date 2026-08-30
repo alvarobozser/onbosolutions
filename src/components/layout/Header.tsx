@@ -26,7 +26,10 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="text-xl font-black tracking-tight text-black uppercase">
+          <Link to="/" className="flex items-center gap-2 text-xl font-black tracking-tight text-black uppercase" style={{ fontFamily: 'var(--font-display)' }}>
+            <svg viewBox="0 0 20 16" fill="currentColor" className="w-5 h-4 shrink-0" aria-hidden="true">
+              <path d="M0 0h12l8 8-8 8H0l8-8L0 0z" />
+            </svg>
             ONBO
           </Link>
 

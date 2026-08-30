@@ -36,7 +36,10 @@ export default function Hero() {
             {t('hero.title_line1')}<br />
             {t('hero.title_line2')}
           </h1>
-          <div className="mt-10 flex flex-wrap gap-4">
+          <p className="mt-6 text-lg text-gray-500 max-w-xl leading-relaxed">
+            {t('hero.subtitle')}
+          </p>
+          <div className="mt-8 flex flex-wrap gap-4">
             <Link
               to="/servicios"
               className="bg-black text-white font-semibold px-6 py-3 text-sm hover:bg-gray-900 transition-colors flex items-center gap-2"
