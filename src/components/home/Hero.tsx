@@ -5,32 +5,32 @@ import { Link } from 'react-router-dom'
 export default function Hero() {
   const { t } = useTranslation()
   const shapeRef = useRef<HTMLDivElement>(null)
-  const spinRef = useRef(0)
   const tiltRef = useRef({ x: 0, y: 0 })
-  const targetTiltRef = useRef({ x: 0, y: 0 })
-  const isDraggingRef = useRef(false)
+  const targetRef = useRef({ x: 0, y: 0 })
   const rafRef = useRef<number>(0)
-  const [transform, setTransform] = useState('')
+  const [style, setStyle] = useState<React.CSSProperties>({})
 
   useEffect(() => {
     let prev = performance.now()
 
     const tick = (now: number) => {
-      const dt = now - prev
       prev = now
-
-      // Auto-giro en Z siempre activo
-      spinRef.current += dt * (360 / 18000)
-
-      // Suavizar tilt — solo si se está arrastrando
-      const lerpFactor = isDraggingRef.current ? 0.08 : 0.04
-      tiltRef.current.x += (targetTiltRef.current.x - tiltRef.current.x) * lerpFactor
-      tiltRef.current.y += (targetTiltRef.current.y - tiltRef.current.y) * lerpFactor
+      const lerpFactor = 0.07
+      tiltRef.current.x += (targetRef.current.x - tiltRef.current.x) * lerpFactor
+      tiltRef.current.y += (targetRef.current.y - tiltRef.current.y) * lerpFactor
 
       const { x, y } = tiltRef.current
-      setTransform(
-        `perspective(600px) rotateX(${(-y * 28).toFixed(2)}deg) rotateY(${(x * 28).toFixed(2)}deg) rotateZ(${spinRef.current.toFixed(2)}deg)`
-      )
+      const rx = (-y * 30).toFixed(1)
+      const ry = (x * 30).toFixed(1)
+      const shadowX = (x * 16).toFixed(1)
+      const shadowY = (y * 16).toFixed(1)
+
+      setStyle({
+        transform: `perspective(500px) rotateX(${rx}deg) rotateY(${ry}deg)`,
+        filter: `drop-shadow(${shadowX}px ${shadowY}px 18px rgba(0,0,0,0.35))`,
+        willChange: 'transform, filter',
+        transformOrigin: '50% 50%',
+      })
 
       rafRef.current = requestAnimationFrame(tick)
     }
@@ -39,15 +39,19 @@ export default function Hero() {
     return () => cancelAnimationFrame(rafRef.current)
   }, [])
 
-  const getTilt = (e: React.MouseEvent) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!shapeRef.current) return
     const r = shapeRef.current.getBoundingClientRect()
     const cx = r.left + r.width / 2
     const cy = r.top + r.height / 2
-    targetTiltRef.current = {
-      x: Math.max(-1, Math.min(1, (e.clientX - cx) / (r.width * 1.2))),
-      y: Math.max(-1, Math.min(1, (e.clientY - cy) / (r.height * 1.2))),
+    targetRef.current = {
+      x: Math.max(-1, Math.min(1, (e.clientX - cx) / (r.width * 0.8))),
+      y: Math.max(-1, Math.min(1, (e.clientY - cy) / (r.height * 0.8))),
     }
+  }
+
+  const handleMouseLeave = () => {
+    targetRef.current = { x: 0, y: 0 }
   }
 
   return (
@@ -80,21 +84,19 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Logo mark 3D — interactivo al hacer clic */}
+          {/* Logo mark 3D — tilt con el ratón */}
           <div
-            className="hidden lg:flex items-center justify-center cursor-grab active:cursor-grabbing"
-            aria-hidden="true"
             ref={shapeRef}
-            onMouseDown={(e) => { isDraggingRef.current = true; getTilt(e) }}
-            onMouseMove={(e) => { if (isDraggingRef.current) getTilt(e) }}
-            onMouseUp={() => { isDraggingRef.current = false; targetTiltRef.current = { x: 0, y: 0 } }}
-            onMouseLeave={() => { isDraggingRef.current = false; targetTiltRef.current = { x: 0, y: 0 } }}
+            className="hidden lg:flex items-center justify-center cursor-crosshair"
+            aria-hidden="true"
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
           >
             <svg
               viewBox="0 0 20 16"
               fill="black"
               className="w-[200px] h-[160px] select-none"
-              style={{ transform, willChange: 'transform', transformOrigin: '50% 50%' }}
+              style={style}
             >
               <path d="M0 0h12l8 8-8 8H0l8-8L0 0z" />
             </svg>
