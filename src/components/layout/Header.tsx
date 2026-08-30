@@ -1,8 +1,7 @@
-import { Menu, X, Globe } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, NavLink } from 'react-router-dom'
-import i18n from '../../i18n/index'
 
 const NAV_LINKS = [
   { to: '/', labelKey: 'nav.home' },
@@ -14,12 +13,6 @@ export default function Header() {
   const { t } = useTranslation()
   const [menuOpen, setMenuOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
-  const currentLang = i18n.language?.startsWith('en') ? 'EN' : 'ES'
-
-  function toggleLang() {
-    const next = currentLang === 'ES' ? 'en' : 'es'
-    i18n.changeLanguage(next)
-  }
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-black/10">
@@ -64,25 +57,13 @@ export default function Header() {
               </NavLink>
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-1 w-56 bg-white border border-black/10 shadow-lg">
-                  <Link
-                    to="/servicios"
-                    className="block px-4 py-3 text-sm hover:bg-gray-50 border-b border-black/5"
-                    onClick={() => setServicesOpen(false)}
-                  >
+                  <Link to="/servicios" className="block px-4 py-3 text-sm hover:bg-gray-50 border-b border-black/5" onClick={() => setServicesOpen(false)}>
                     {t('services.dev.title')}
                   </Link>
-                  <Link
-                    to="/servicios"
-                    className="block px-4 py-3 text-sm hover:bg-gray-50 border-b border-black/5"
-                    onClick={() => setServicesOpen(false)}
-                  >
+                  <Link to="/servicios" className="block px-4 py-3 text-sm hover:bg-gray-50 border-b border-black/5" onClick={() => setServicesOpen(false)}>
                     {t('services.consulting.title')}
                   </Link>
-                  <Link
-                    to="/servicios"
-                    className="block px-4 py-3 text-sm hover:bg-gray-50"
-                    onClick={() => setServicesOpen(false)}
-                  >
+                  <Link to="/servicios" className="block px-4 py-3 text-sm hover:bg-gray-50" onClick={() => setServicesOpen(false)}>
                     {t('services.innovation.title')}
                   </Link>
                 </div>
@@ -91,15 +72,7 @@ export default function Header() {
           </nav>
 
           {/* Desktop right */}
-          <div className="hidden md:flex items-center gap-4">
-            <button
-              onClick={toggleLang}
-              className="flex items-center gap-1 text-sm text-gray-600 hover:text-black transition-colors"
-              aria-label="Switch language"
-            >
-              <Globe size={14} />
-              {currentLang}
-            </button>
+          <div className="hidden md:flex items-center">
             <Link
               to="/contacto"
               className="bg-black text-white text-sm font-semibold px-4 py-2 hover:bg-gray-900 transition-colors flex items-center gap-1"
@@ -144,17 +117,11 @@ export default function Header() {
             >
               {t('nav.services')}
             </NavLink>
-            <div className="flex items-center justify-between pt-2 border-t border-black/10">
-              <button
-                onClick={toggleLang}
-                className="flex items-center gap-1 text-sm text-gray-600"
-              >
-                <Globe size={14} /> {currentLang}
-              </button>
+            <div className="pt-2 border-t border-black/10">
               <Link
                 to="/contacto"
                 onClick={() => setMenuOpen(false)}
-                className="bg-black text-white text-sm font-semibold px-4 py-2"
+                className="bg-black text-white text-sm font-semibold px-4 py-2 inline-block"
               >
                 {t('nav.cta')} →
               </Link>

@@ -8,8 +8,8 @@
     "cta": "Contacto"
   },
   "hero": {
-    "title_line1": "Tecnología a medida que",
-    "title_line2": "convierte ideas en productos reales",
+    "title_line1": "Tecnología a medida que convierte ideas en productos reales",
+    "title_line2": "",
     "subtitle": "Desarrollamos software, integramos IA y acompañamos tu transformación digital. Sin humo, sin promesas vacías.",
     "cta_primary": "Cómo te ayudamos",
     "cta_secondary": "Habla con nosotros"
@@ -19,7 +19,7 @@
     "dev": {
       "title": "Desarrollo a Medida",
       "subtitle": "Software que encaja con tu negocio, no al revés",
-      "body": "Construimos aplicaciones web, APIs y sistemas backend adaptados exactamente a tus procesos. Sin plantillas, sin soluciones genéricas.",
+      "body": "Construimos aplicaciones y sistemas adaptados exactamente a tus procesos. Sin plantillas, sin soluciones genéricas.",
       "cta": "Ver servicio",
       "right_title": "Casos de Éxito",
       "case1_name": "Plataforma logística",
@@ -30,24 +30,16 @@
     "consulting": {
       "title": "Consultoría de Transformación Digital e IA",
       "subtitle": "Estrategia clara, implementación real",
-      "body": "Analizamos tus procesos, identificamos dónde la IA genera valor real y te acompañamos en la integración sin humo ni promesas vacías.",
+      "body": "Analizamos tus procesos, identificamos dónde la IA genera valor real y te acompañamos en la integración.",
       "cta": "Ver servicio",
       "right_title": "En Cifras",
-      "metric1": "< 24h informe entregado",
+      "metric1": "Tiempos 24/48h informe entregado",
       "metric2": "0€ compromiso de continuidad",
       "metric3": "100% proyectos con ROI definido"
-    },
-    "innovation": {
-      "title": "Innovación y Financiación de Proyectos",
-      "subtitle": "Tu idea merece financiación",
-      "body": "Te ayudamos a identificar convocatorias públicas y privadas, preparamos la documentación técnica y gestionamos el proceso de principio a fin.",
-      "cta": "Ver convocatorias",
-      "right_title": "Respuesta garantizada",
-      "badge": "Respuesta en menos de 24h"
     }
   },
   "cta_banner": {
-    "badge": "Respuesta en menos de 24h",
+    "badge": "Respuesta en menos de 24/48h",
     "title_line1": "¿Tienes un proyecto en mente?",
     "title_line2": "Hablemos sin compromiso.",
     "subtitle": "Te contamos exactamente qué podemos hacer y en cuánto tiempo.",
@@ -56,17 +48,6 @@
     "pill3": "Resultados reales",
     "cta": "Cuéntanos tu proyecto",
     "email_label": "O escríbenos directamente a"
-  },
-  "guides": {
-    "section_title": "Guías Prácticas",
-    "see_all": "Ver todas las guías",
-    "categories": {
-      "ia": "IA Aplicada",
-      "backend": "Backend",
-      "arquitectura": "Arquitectura",
-      "financiacion": "Financiación",
-      "digital": "Digital"
-    }
   },
   "identity": {
     "section_title": "Identidad",

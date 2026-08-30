@@ -89,34 +89,6 @@ export default function ServiciosPreview() {
               </div>
             }
           />
-
-          {/* Innovación */}
-          <SplitCard
-            left={
-              <CardLeft
-                title={t('services.innovation.title')}
-                subtitle={t('services.innovation.subtitle')}
-                body={t('services.innovation.body')}
-                cta={t('services.innovation.cta')}
-              />
-            }
-            right={
-              <div className="flex flex-col justify-between h-full">
-                <p className="text-xs uppercase tracking-widest text-gray-400 mb-6">{t('services.innovation.right_title')}</p>
-                <div className="mt-auto">
-                  <Link
-                    to="/contacto"
-                    className="inline-block bg-white text-black text-sm font-semibold px-5 py-2.5 hover:bg-gray-100 transition-colors"
-                  >
-                    {t('services.innovation.cta')} →
-                  </Link>
-                  <div className="mt-4 inline-flex items-center border border-white/30 px-3 py-1.5 text-xs">
-                    ✓ {t('services.innovation.badge')}
-                  </div>
-                </div>
-              </div>
-            }
-          />
         </div>
       </div>
     </section>
