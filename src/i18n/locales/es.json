@@ -2,104 +2,105 @@
   "nav": {
     "home": "Inicio",
     "services": "Servicios",
-    "guides": "Guías",
     "identity": "Identidad",
     "contact": "Contacto",
     "cta": "Contacto"
   },
   "hero": {
-    "title_line1": "Tecnología a medida que convierte ideas en productos reales",
-    "title_line2": "",
-    "subtitle": "Desarrollamos software, integramos IA y acompañamos tu transformación digital. Sin humo, sin promesas vacías.",
+    "title_line1": "Tu negocio, digitalizado",
+    "title_line2": "con IA y software a medida",
+    "subtitle": "Construimos las herramientas digitales que tu empresa necesita e integramos inteligencia artificial donde realmente aporta valor.",
     "cta_primary": "Cómo te ayudamos",
     "cta_secondary": "Habla con nosotros"
   },
   "services": {
-    "section_title": "Nuestros Servicios",
+    "section_title": "Qué hacemos",
     "dev": {
-      "title": "Desarrollo a Medida",
-      "subtitle": "Software que encaja con tu negocio, no al revés",
-      "body": "Construimos aplicaciones y sistemas adaptados exactamente a tus procesos. Sin plantillas, sin soluciones genéricas.",
-      "cta": "Ver servicio",
-      "right_title": "Casos de Éxito",
-      "case1_name": "Plataforma logística",
-      "case1_desc": "Reducción del 40% en tiempo de gestión de pedidos.",
-      "case2_name": "Portal de gestión medioambiental",
-      "case2_desc": "Modernización de sistema legacy con cero downtime."
+      "title": "Software a Medida",
+      "subtitle": "Resuelve el problema, no el de otro",
+      "body": "Construimos aplicaciones y herramientas digitales diseñadas exactamente para cómo trabaja tu empresa. Sin soluciones genéricas que obligan a adaptar tu negocio a la herramienta — lo hacemos al revés.",
+      "cta": "Cuéntanos tu reto",
+      "right_title": "Cómo trabajamos",
+      "process1": "Primero escuchamos",
+      "process1_desc": "Entendemos tu negocio antes de proponer nada.",
+      "process2": "Resultados desde el inicio",
+      "process2_desc": "Entregas incrementales: ves avances desde la primera semana.",
+      "process3": "Sin sorpresas",
+      "process3_desc": "Presupuesto cerrado y plazos reales desde el principio."
     },
     "consulting": {
-      "title": "Consultoría de Transformación Digital e IA",
+      "title": "IA Integrada en tu Negocio",
       "subtitle": "Estrategia clara, implementación real",
-      "body": "Analizamos tus procesos, identificamos dónde la IA genera valor real y te acompañamos en la integración.",
-      "cta": "Ver servicio",
-      "right_title": "En Cifras",
-      "metric1": "Tiempos 24/48h informe entregado",
-      "metric2": "0€ compromiso de continuidad",
-      "metric3": "100% proyectos con ROI definido"
+      "body": "Analizamos tus procesos, identificamos dónde la IA genera valor real y te acompañamos en la integración. Sin proyectos piloto que no escalan. Sin promesas vacías.",
+      "cta": "Cuéntanos tu reto",
+      "right_title": "Nuestro compromiso",
+      "metric1": "Diagnóstico honesto: si la IA no aplica, te lo decimos",
+      "metric2": "Sin costes ocultos ni compromisos a largo plazo",
+      "metric3": "KPIs definidos desde el día uno"
     }
   },
   "cta_banner": {
-    "badge": "Respuesta en menos de 24/48h",
-    "title_line1": "¿Tienes un proyecto en mente?",
-    "title_line2": "Hablemos sin compromiso.",
-    "subtitle": "Te contamos exactamente qué podemos hacer y en cuánto tiempo.",
-    "pill1": "Consulta gratuita",
-    "pill2": "Sin compromiso",
-    "pill3": "Resultados reales",
+    "badge": "Primera consulta sin coste",
+    "title_line1": "¿Tienes un reto en mente?",
+    "title_line2": "Cuéntanoslo sin compromiso.",
+    "subtitle": "Analizamos tu situación y te decimos con honestidad qué podemos hacer, cómo y en cuánto tiempo.",
+    "pill1": "Sin coste inicial",
+    "pill2": "Sin letra pequeña",
+    "pill3": "Respuesta en 24h",
     "cta": "Cuéntanos tu proyecto",
     "email_label": "O escríbenos directamente a"
   },
   "identity": {
-    "section_title": "Identidad",
-    "narrative_title": "Origen, Visión y Ambición",
-    "narrative_body": "ONBO Solutions nació de la convicción de que la tecnología debe ser una herramienta honesta: sin promesas exageradas, sin soluciones de catálogo. Somos un equipo técnico que habla claro, construye con rigor y acompaña a empresas que quieren crecer de verdad en la era digital.",
+    "section_title": "Quiénes somos",
+    "narrative_title": "Por qué existe ONBO",
+    "narrative_body": "Creamos ONBO porque vimos demasiadas empresas atrapadas entre dos opciones: soluciones genéricas que no encajan del todo, o presupuestos de agencia que no se pueden permitir. Somos un equipo técnico pequeño, directo y honesto. No prometemos lo que no podemos cumplir. Y cuando decimos que algo no tiene sentido para tu negocio, te lo decimos.",
     "quote": "\"La mejor tecnología es la que el usuario no tiene que pensar. Nosotros nos encargamos de esa parte.\"",
     "quote_author": "Equipo ONBO Solutions",
     "values": {
-      "security_title": "Seguridad",
-      "security_sub": "por defecto",
+      "security_title": "Honestidad",
+      "security_sub": "ante todo",
       "ai_title": "IA",
-      "ai_sub": "integrada",
+      "ai_sub": "aplicada, no de adorno",
       "software_title": "Software",
-      "software_sub": "adaptado",
-      "scale_title": "Escalabilidad",
-      "scale_sub": "desde la base"
+      "software_sub": "a tu medida",
+      "scale_title": "Resultados",
+      "scale_sub": "desde el primer día"
     },
     "team_title": "El Equipo",
     "team": {
       "architect": {
         "name": "Moicho",
-        "role": "Arquitecto de Software Backend",
-        "bio": "Más de cuatro años diseñando sistemas backend con Java 21, Spring Boot y arquitectura hexagonal. Especializado en DDD, Apache Kafka y diseño API-First. Ha liderado equipos técnicos en remoto y liderado migraciones de sistemas legacy sin interrupciones."
+        "role": "Fundador — Desarrollo de Software",
+        "bio": "Más de cuatro años construyendo aplicaciones digitales para empresas de distintos sectores. Especializado en diseñar sistemas que escalan con el negocio sin complicar la operación. Le obsesiona que el software sea útil, no solo funcional."
       },
       "ai": {
         "name": "A.R.",
-        "role": "Especialista en IA Aplicada",
-        "bio": "Experto en arquitecturas RAG, sistemas multi-agente y evaluación de modelos en producción. Formación activa en certificaciones de Anthropic. Ha desarrollado SaaS de generación de contenido con IA y explorado fine-tuning con QLoRA sobre modelos abiertos."
+        "role": "IA Aplicada y Automatización",
+        "bio": "Lleva años trabajando en cómo integrar inteligencia artificial en procesos de negocio reales. Su foco es el impacto medible: no monta demos impresionantes que luego no funcionan en producción. Formación continua en las herramientas y modelos más actuales."
       },
       "fullstack": {
         "name": "V.M.",
-        "role": "Ingeniero Full-Stack",
-        "bio": "Cuatro años de experiencia en desarrollo full-stack con Angular y Java Spring Boot. Ha construido aplicaciones para el sector público, plataformas de movilidad y herramientas de productividad. Certificado en metodologías SCRUM."
+        "role": "Desarrollo y Producto Digital",
+        "bio": "Cuatro años desarrollando productos digitales desde la idea hasta el lanzamiento. Ha trabajado con equipos de distintos tamaños y sectores, siempre con foco en que la solución sea usable y que el cliente entienda lo que está pagando."
       }
     }
   },
   "faq": {
     "section_title": "Lo que necesitas saber",
     "q1": "¿Qué hace exactamente ONBO Solutions?",
-    "a1": "Desarrollamos software a medida, acompañamos procesos de transformación digital e integramos IA donde genera valor real. No vendemos productos de catálogo: analizamos tu caso y construimos la solución que necesitas.",
-    "q2": "¿Qué servicios ofrecéis?",
-    "a2": "Desarrollo backend y full-stack, consultoría de transformación digital e IA, e identificación y gestión de convocatorias de financiación para proyectos de innovación.",
-    "q3": "¿Cuánto cuesta un proyecto?",
-    "a3": "Depende del alcance. Ofrecemos una consulta gratuita donde analizamos tu situación y preparamos un presupuesto sin compromiso. La mayoría de proyectos arranca con un análisis técnico en menos de 24 horas.",
+    "a1": "Construimos software a medida para empresas y ayudamos a integrar inteligencia artificial en sus procesos. No vendemos soluciones de catálogo: analizamos tu caso concreto y construimos lo que tiene sentido para ti.",
+    "q2": "¿Para qué tipo de empresas trabajáis?",
+    "a2": "Trabajamos con pymes, startups y equipos internos de empresas más grandes que necesitan una solución específica que las herramientas estándar no cubren. El tamaño no importa tanto como tener un problema concreto que resolver.",
+    "q3": "¿Cuánto cuesta trabajar con vosotros?",
+    "a3": "Depende del alcance. Lo primero es una conversación gratuita donde entendemos tu situación. A partir de ahí, hacemos una propuesta con precio cerrado y plazos reales, sin letra pequeña. Si no encajamos, te lo decimos.",
     "q4": "¿Cuánto tiempo tarda un proyecto?",
-    "a4": "Un MVP funcional puede estar listo en 4–8 semanas. Los proyectos más complejos se planifican en fases para que puedas ver valor desde el primer sprint.",
-    "q5": "¿Dónde estáis ubicados?",
-    "a5": "Trabajamos en remoto desde España. Atendemos clientes de cualquier país hispanohablante y también en inglés."
+    "a4": "Un primer entregable funcional suele estar listo en 2–4 semanas. Los proyectos más completos se dividen en fases para que veas resultados desde el inicio, sin esperar meses a ver algo.",
+    "q5": "¿Trabajáis en remoto?",
+    "a5": "Sí, trabajamos en remoto desde España y atendemos clientes de cualquier parte. Nos adaptamos a tu zona horaria para las reuniones de seguimiento."
   },
   "contact": {
-    "section_title": "Nuestro Contacto",
-    "intro": "Cuéntanos qué necesitas. Te respondemos en menos de 24 horas con un análisis honesto de cómo podemos ayudarte.",
+    "section_title": "Hablemos",
+    "intro": "Cuéntanos qué necesitas. Te respondemos en menos de 24 horas con una valoración honesta de si podemos ayudarte y cómo.",
     "location_label": "Ubicación",
     "location_value": "España — Trabajo en remoto",
     "email_label": "Email",
@@ -108,21 +109,20 @@
     "form": {
       "name": "Nombre",
       "email": "Email",
-      "interest": "¿Qué te interesa?",
-      "interest_dev": "Desarrollo a medida",
-      "interest_consulting": "Consultoría de IA",
-      "interest_funding": "Financiación de proyectos",
-      "interest_other": "Otro",
+      "interest": "¿En qué podemos ayudarte?",
+      "interest_dev": "Software a medida",
+      "interest_consulting": "IA en mis procesos",
+      "interest_other": "Tengo una duda / otro",
       "phone": "Teléfono (opcional)",
-      "message": "Mensaje",
+      "message": "Cuéntanos tu situación",
       "submit": "Enviar mensaje",
       "sending": "Enviando...",
-      "success": "Mensaje enviado. Te respondemos en menos de 24h.",
+      "success": "Mensaje recibido. Te respondemos en menos de 24h.",
       "error": "Algo salió mal. Inténtalo de nuevo o escríbenos directamente."
     }
   },
   "footer": {
-    "tagline": "Tecnología honesta para empresas reales.",
+    "tagline": "Software e IA para empresas que quieren crecer de verdad.",
     "rights": "Todos los derechos reservados."
   }
 }

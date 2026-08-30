@@ -53,12 +53,16 @@ export default function ServiciosPreview() {
                 <p className="text-xs uppercase tracking-widest text-gray-400 mb-6">{t('services.dev.right_title')}</p>
                 <div className="space-y-4">
                   <div>
-                    <p className="font-semibold text-sm">{t('services.dev.case1_name')}</p>
-                    <p className="text-gray-400 text-sm mt-1">{t('services.dev.case1_desc')}</p>
+                    <p className="font-semibold text-sm">{t('services.dev.process1')}</p>
+                    <p className="text-gray-400 text-sm mt-1">{t('services.dev.process1_desc')}</p>
                   </div>
                   <div className="border-t border-white/10 pt-4">
-                    <p className="font-semibold text-sm">{t('services.dev.case2_name')}</p>
-                    <p className="text-gray-400 text-sm mt-1">{t('services.dev.case2_desc')}</p>
+                    <p className="font-semibold text-sm">{t('services.dev.process2')}</p>
+                    <p className="text-gray-400 text-sm mt-1">{t('services.dev.process2_desc')}</p>
+                  </div>
+                  <div className="border-t border-white/10 pt-4">
+                    <p className="font-semibold text-sm">{t('services.dev.process3')}</p>
+                    <p className="text-gray-400 text-sm mt-1">{t('services.dev.process3_desc')}</p>
                   </div>
                 </div>
               </div>

@@ -35,7 +35,6 @@ export default function Footer() {
             <nav className="flex flex-col gap-3 text-sm text-gray-400">
               <Link to="/servicios" className="hover:text-white transition-colors">{t('services.dev.title')}</Link>
               <Link to="/servicios" className="hover:text-white transition-colors">{t('services.consulting.title')}</Link>
-              <Link to="/servicios" className="hover:text-white transition-colors">{t('services.innovation.title')}</Link>
             </nav>
           </div>
 

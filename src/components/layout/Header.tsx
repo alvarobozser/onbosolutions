@@ -59,11 +59,8 @@ export default function Header() {
                   <Link to="/servicios" className="block px-4 py-3 text-sm hover:bg-gray-50 border-b border-black/5" onClick={() => setServicesOpen(false)}>
                     {t('services.dev.title')}
                   </Link>
-                  <Link to="/servicios" className="block px-4 py-3 text-sm hover:bg-gray-50 border-b border-black/5" onClick={() => setServicesOpen(false)}>
-                    {t('services.consulting.title')}
-                  </Link>
                   <Link to="/servicios" className="block px-4 py-3 text-sm hover:bg-gray-50" onClick={() => setServicesOpen(false)}>
-                    {t('services.innovation.title')}
+                    {t('services.consulting.title')}
                   </Link>
                 </div>
               )}

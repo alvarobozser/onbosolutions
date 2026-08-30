@@ -6,7 +6,6 @@ type FormStatus = 'idle' | 'loading' | 'success' | 'error'
 const INTEREST_KEYS = [
   'contact.form.interest_dev',
   'contact.form.interest_consulting',
-  'contact.form.interest_funding',
   'contact.form.interest_other',
 ] as const
 

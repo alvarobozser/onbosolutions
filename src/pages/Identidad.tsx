@@ -1,11 +1,10 @@
 import { useTranslation } from 'react-i18next'
-import TeamCard from '../components/identidad/TeamCard'
 
 const VALUES = [
-  { titleKey: 'identity.values.security_title', subKey: 'identity.values.security_sub' },
-  { titleKey: 'identity.values.ai_title', subKey: 'identity.values.ai_sub' },
-  { titleKey: 'identity.values.software_title', subKey: 'identity.values.software_sub' },
-  { titleKey: 'identity.values.scale_title', subKey: 'identity.values.scale_sub' },
+  'Honestidad ante todo',
+  'IA aplicada, no de adorno',
+  'Software a tu medida',
+  'Resultados desde el primer día',
 ] as const
 
 const TEAM_MEMBERS = [
@@ -30,7 +29,7 @@ export default function Identidad() {
         </div>
       </section>
 
-      {/* Cita + imagen abstracta */}
+      {/* Cita */}
       <section className="bg-black text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
@@ -42,9 +41,8 @@ export default function Identidad() {
                 — {t('identity.quote_author')}
               </cite>
             </div>
-            {/* Imagen abstracta generada con SVG */}
-            <div className="lg:w-72 h-48 lg:h-64 relative overflow-hidden shrink-0">
-              <svg viewBox="0 0 288 256" className="w-full h-full" aria-hidden="true">
+            <div className="lg:w-72 h-48 lg:h-64 relative overflow-hidden shrink-0" aria-hidden="true">
+              <svg viewBox="0 0 288 256" className="w-full h-full">
                 <defs>
                   <linearGradient id="tunnel" x1="50%" y1="0%" x2="50%" y2="100%">
                     <stop offset="0%" stopColor="#ffffff" stopOpacity="0.05" />
@@ -54,14 +52,9 @@ export default function Identidad() {
                 {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
                   <rect
                     key={i}
-                    x={i * 16}
-                    y={i * 14}
-                    width={288 - i * 32}
-                    height={256 - i * 28}
-                    fill="none"
-                    stroke="white"
-                    strokeWidth="0.5"
-                    strokeOpacity={0.15 + i * 0.06}
+                    x={i * 16} y={i * 14}
+                    width={288 - i * 32} height={256 - i * 28}
+                    fill="none" stroke="white" strokeWidth="0.5" strokeOpacity={0.15 + i * 0.06}
                   />
                 ))}
                 <circle cx="144" cy="128" r="20" fill="white" fillOpacity="0.1" />
@@ -75,30 +68,35 @@ export default function Identidad() {
       {/* Valores */}
       <section className="bg-black text-white py-12 border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
-            {VALUES.map(({ titleKey, subKey }) => (
-              <div key={titleKey} className="bg-black p-8">
-                <p className="text-xl font-black">{t(titleKey)}</p>
-                <p className="text-sm text-gray-400 mt-1">{t(subKey)}</p>
+          <div className="flex flex-col sm:flex-row sm:flex-wrap gap-x-12 gap-y-4">
+            {VALUES.map((v, i) => (
+              <div key={v} className="flex items-center gap-3 text-sm">
+                <span className="text-gray-600 font-mono text-xs">0{i + 1}</span>
+                <span className="font-semibold text-white">{v}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Equipo */}
+      {/* Equipo — tarjeta única */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-black text-black mb-12">{t('identity.team_title')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-black/10">
-            {TEAM_MEMBERS.map(({ nameKey, roleKey, bioKey, initials }) => (
-              <div key={nameKey} className="bg-white">
-                <TeamCard
-                  name={t(nameKey)}
-                  role={t(roleKey)}
-                  bio={t(bioKey)}
-                  initials={initials}
-                />
+          <h2 className="text-3xl font-black text-black mb-8">{t('identity.team_title')}</h2>
+          <div className="border border-black/10">
+            {TEAM_MEMBERS.map(({ nameKey, roleKey, bioKey, initials }, idx) => (
+              <div
+                key={nameKey}
+                className={`flex flex-col sm:flex-row gap-6 p-8 ${idx > 0 ? 'border-t border-black/10' : ''}`}
+              >
+                <div className="w-14 h-14 bg-black flex items-center justify-center shrink-0">
+                  <span className="text-white text-sm font-black">{initials}</span>
+                </div>
+                <div>
+                  <h3 className="text-base font-black text-black">{t(nameKey)}</h3>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-gray-500 mt-0.5">{t(roleKey)}</p>
+                  <p className="mt-3 text-sm text-gray-700 leading-relaxed max-w-2xl">{t(bioKey)}</p>
+                </div>
               </div>
             ))}
           </div>

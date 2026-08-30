@@ -63,7 +63,8 @@ export default function Servicios() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="flex flex-col gap-8">
-          {/* Desarrollo a Medida */}
+
+          {/* Software a Medida */}
           <SplitCard
             left={
               <CardLeft
@@ -71,32 +72,36 @@ export default function Servicios() {
                 subtitle={t('services.dev.subtitle')}
                 body={t('services.dev.body')}
                 details={[
-                  'APIs RESTful y GraphQL con OpenAPI/AsyncAPI',
-                  'Arquitectura hexagonal y Domain-Driven Design',
-                  'Microservicios con Apache Kafka',
-                  'Modernización de sistemas legacy',
+                  'Aplicaciones web y herramientas internas para tu equipo',
+                  'Automatización de procesos manuales o repetitivos',
+                  'Integraciones entre sistemas que no se hablan entre sí',
+                  'Paneles de control y reportes adaptados a tu operativa',
                 ]}
-                cta={t('cta_banner.cta')}
+                cta={t('services.dev.cta')}
               />
             }
             right={
               <div>
                 <p className="text-xs uppercase tracking-widest text-gray-400 mb-6">{t('services.dev.right_title')}</p>
-                <div className="space-y-4">
+                <div className="space-y-5">
                   <div>
-                    <p className="font-semibold text-sm">{t('services.dev.case1_name')}</p>
-                    <p className="text-gray-400 text-sm mt-1">{t('services.dev.case1_desc')}</p>
+                    <p className="font-semibold text-sm">{t('services.dev.process1')}</p>
+                    <p className="text-gray-400 text-sm mt-1">{t('services.dev.process1_desc')}</p>
                   </div>
-                  <div className="border-t border-white/10 pt-4">
-                    <p className="font-semibold text-sm">{t('services.dev.case2_name')}</p>
-                    <p className="text-gray-400 text-sm mt-1">{t('services.dev.case2_desc')}</p>
+                  <div className="border-t border-white/10 pt-5">
+                    <p className="font-semibold text-sm">{t('services.dev.process2')}</p>
+                    <p className="text-gray-400 text-sm mt-1">{t('services.dev.process2_desc')}</p>
+                  </div>
+                  <div className="border-t border-white/10 pt-5">
+                    <p className="font-semibold text-sm">{t('services.dev.process3')}</p>
+                    <p className="text-gray-400 text-sm mt-1">{t('services.dev.process3_desc')}</p>
                   </div>
                 </div>
               </div>
             }
           />
 
-          {/* Consultoría IA */}
+          {/* IA Integrada */}
           <SplitCard
             left={
               <CardLeft
@@ -104,22 +109,22 @@ export default function Servicios() {
                 subtitle={t('services.consulting.subtitle')}
                 body={t('services.consulting.body')}
                 details={[
-                  'Auditoría de procesos candidatos a automatización con IA',
-                  'Diseño e integración de sistemas RAG en producción',
-                  'Arquitecturas multi-agente con LangChain4j, MCP y Spring AI',
-                  'Evaluación y observabilidad de modelos en producción',
+                  'Identificamos qué procesos se benefician realmente de la IA',
+                  'Automatización de tareas repetitivas con resultados medibles',
+                  'Asistentes y herramientas de IA adaptados a tu forma de trabajar',
+                  'Seguimiento y ajuste después de cada implementación',
                 ]}
-                cta={t('cta_banner.cta')}
+                cta={t('services.consulting.cta')}
               />
             }
             right={
               <div>
                 <p className="text-xs uppercase tracking-widest text-gray-400 mb-6">{t('services.consulting.right_title')}</p>
-                <ul className="space-y-3">
+                <ul className="space-y-4">
                   {(['metric1', 'metric2', 'metric3'] as const).map((key) => (
-                    <li key={key} className="flex items-start gap-2 text-sm">
-                      <span className="text-white mt-0.5">✓</span>
-                      <span>{t(`services.consulting.${key}`)}</span>
+                    <li key={key} className="flex items-start gap-3 text-sm">
+                      <span className="text-white mt-0.5 shrink-0">✓</span>
+                      <span className="text-gray-300">{t(`services.consulting.${key}`)}</span>
                     </li>
                   ))}
                 </ul>
@@ -127,39 +132,6 @@ export default function Servicios() {
             }
           />
 
-          {/* Innovación y Financiación */}
-          <SplitCard
-            left={
-              <CardLeft
-                title={t('services.innovation.title')}
-                subtitle={t('services.innovation.subtitle')}
-                body={t('services.innovation.body')}
-                details={[
-                  'Identificación de convocatorias Next Generation, CDTI, ENISA',
-                  'Redacción de memoria técnica y justificación económica',
-                  'Seguimiento y reporting durante la ejecución del proyecto',
-                  'Auditoría de elegibilidad previa sin coste',
-                ]}
-                cta={t('cta_banner.cta')}
-              />
-            }
-            right={
-              <div className="flex flex-col justify-between h-full">
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-gray-400 mb-4">{t('services.innovation.right_title')}</p>
-                  <div className="inline-flex items-center border border-white/30 px-3 py-1.5 text-xs">
-                    ✓ {t('services.innovation.badge')}
-                  </div>
-                </div>
-                <Link
-                  to="/contacto"
-                  className="mt-8 inline-block bg-white text-black text-sm font-semibold px-5 py-2.5 hover:bg-gray-100 transition-colors self-start"
-                >
-                  {t('services.innovation.cta')} →
-                </Link>
-              </div>
-            }
-          />
         </div>
       </div>
     </main>
