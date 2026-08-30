@@ -12,8 +12,14 @@
 body {
   margin: 0;
   font-family: var(--font-sans);
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Evitar que etiquetas semánticas hereden italic del navegador */
+em, i, cite, address {
+  font-style: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
