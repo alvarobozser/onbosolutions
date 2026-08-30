@@ -74,7 +74,11 @@ export default function Identidad() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border border-black/10 p-8 lg:p-12 max-w-3xl">
             <h2 className="text-3xl font-black text-black">{t('identity.team_title')}</h2>
-            <p className="mt-4 text-gray-700 leading-relaxed">{t('identity.team_intro')}</p>
+            <div className="mt-4 space-y-4">
+              {t('identity.team_intro').split('\n\n').map((p, i) => (
+                <p key={i} className="text-gray-700 leading-relaxed">{p}</p>
+              ))}
+            </div>
           </div>
         </div>
       </section>
