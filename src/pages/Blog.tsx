@@ -17,7 +17,7 @@ export default function Blog() {
       <section className="py-20 bg-white border-b border-black/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs uppercase tracking-widest text-gray-400 mb-4">Blog</p>
-          <h1 className="text-5xl font-black text-black">Guías prácticas</h1>
+          <h1 className="text-5xl font-black text-black">Recursos</h1>
           <p className="mt-4 text-gray-500 max-w-xl text-lg">
             Sin humo. Lo que realmente necesitas saber sobre IA y software para tomar mejores decisiones en tu empresa.
           </p>
