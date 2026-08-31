@@ -9,10 +9,10 @@ export interface Article {
 
 export const ARTICLES: Article[] = [
   {
-    slug: 'que-es-un-agente-de-ia',
+    slug: 'agentes-ia-que-hacen-y-cuando-usarlos',
     category: 'Agentes de IA',
-    title: '¿Qué es un agente de IA y qué puede hacer por mi negocio?',
-    excerpt: 'Los agentes de IA no son robots de ciencia ficción. Son programas que toman decisiones y ejecutan tareas por ti, sin que tengas que estar presente.',
+    title: 'Agentes de IA: qué hacen, qué no hacen y cuándo tiene sentido usarlos',
+    excerpt: 'No son robots, no son magia y no lo hacen todo solos. Esto es lo que hace realmente un agente de IA y en qué casos le saca partido una empresa como la tuya.',
     readTime: '5 min',
     sections: [
       {
@@ -51,10 +51,10 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
-    slug: 'automatizacion-por-donde-empezar',
+    slug: 'automatizar-sin-saber-programar',
     category: 'Automatización',
-    title: 'Automatización de procesos: por dónde empezar si tu empresa no es tech',
-    excerpt: 'No necesitas un equipo de ingenieros para automatizar. Con los procesos correctos identificados, el impacto llega en semanas.',
+    title: 'Automatizar sin saber programar: cómo empezar en una empresa que no es tech',
+    excerpt: 'No hace falta un equipo técnico para dar el primer paso. El secreto está en elegir bien el proceso, no en la tecnología.',
     readTime: '4 min',
     sections: [
       {
@@ -93,10 +93,10 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
-    slug: 'software-a-medida-vs-saas',
+    slug: 'herramienta-generica-o-software-propio',
     category: 'Software a medida',
-    title: 'Software a medida vs. herramientas SaaS: cuándo elegir cada uno',
-    excerpt: 'No todo tiene que construirse desde cero. Pero hay casos en los que un SaaS genérico te limita más de lo que te ayuda.',
+    title: 'Herramienta genérica o software propio: cómo elegir sin equivocarte',
+    excerpt: 'Hay empresas que llevan años pagando suscripciones que no encajan. Y otras que construyeron algo a medida cuando no hacía falta. El criterio para no caer en ninguno de los dos errores.',
     readTime: '6 min',
     sections: [
       {
@@ -134,10 +134,10 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
-    slug: 'ia-lista-para-tu-empresa',
+    slug: 'tres-preguntas-antes-de-integrar-ia',
     category: 'IA para empresas',
-    title: 'Cómo saber si tu empresa está lista para integrar IA',
-    excerpt: 'Antes de integrar IA hay preguntas que hacerse: ¿tienes datos ordenados? ¿hay procesos repetitivos claros? ¿el equipo va a usarlo? Un checklist honesto.',
+    title: 'Antes de integrar IA en tu empresa, responde estas tres preguntas',
+    excerpt: '¿Datos ordenados? ¿Procesos definidos? ¿El equipo va a usarlo? Si alguna respuesta es no, hay trabajo previo más rentable que la IA. Te lo explicamos sin rodeos.',
     readTime: '5 min',
     sections: [
       {
@@ -177,10 +177,10 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
-    slug: 'procesos-que-puedes-automatizar',
+    slug: 'tareas-que-roban-tiempo-en-tu-empresa',
     category: 'Automatización',
-    title: '5 procesos que casi cualquier empresa puede automatizar hoy',
-    excerpt: 'Cinco casos concretos que hemos visto funcionar en empresas medianas, sin grandes inversiones previas.',
+    title: 'Las tareas que más tiempo roban en cualquier empresa (y cómo dejar de hacerlas a mano)',
+    excerpt: 'No hace falta reinventar nada. Hay cinco tipos de tarea que aparecen en casi todas las empresas y que se pueden eliminar con tecnología accesible.',
     readTime: '4 min',
     sections: [
       {
@@ -222,10 +222,10 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
-    slug: 'lo-que-nadie-cuenta-sobre-ia-en-pymes',
+    slug: 'por-que-fracasan-los-proyectos-de-ia',
     category: 'IA para empresas',
-    title: 'Lo que nadie te cuenta sobre implementar IA en una pyme',
-    excerpt: 'La mayoría de los fracasos en proyectos de IA no son técnicos. Son organizativos. La verdad sin filtros.',
+    title: 'Por qué fracasan los proyectos de IA (y cómo no caer en los mismos errores)',
+    excerpt: 'La mayoría de proyectos de IA que no funcionan no fallaron por la tecnología. Fallaron antes de arrancar. Estos son los patrones que vemos una y otra vez.',
     readTime: '7 min',
     sections: [
       {
