@@ -52,7 +52,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between gap-4 text-xs text-gray-600">
           <span>© {year} ONBO Solutions. {t('footer.rights')}</span>
-          <Link to="/contacto" className="hover:text-gray-400 transition-colors">
+          <Link to="/privacidad" className="hover:text-gray-400 transition-colors">
             {t('contact.privacy')}
           </Link>
         </div>
