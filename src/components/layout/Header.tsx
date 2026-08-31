@@ -6,6 +6,7 @@ import { Link, NavLink } from 'react-router-dom'
 const NAV_LINKS = [
   { to: '/', labelKey: 'nav.home' },
   { to: '/identidad', labelKey: 'nav.identity' },
+  { to: '/blog', labelKey: 'nav.blog' },
 ] as const
 
 export default function Header() {

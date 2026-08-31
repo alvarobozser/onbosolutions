@@ -45,6 +45,7 @@ export default function Footer() {
             </h4>
             <nav className="flex flex-col gap-3 text-sm text-gray-400">
               <Link to="/identidad" className="hover:text-white transition-colors">{t('nav.identity')}</Link>
+              <Link to="/blog" className="hover:text-white transition-colors">{t('nav.blog')}</Link>
               <Link to="/contacto" className="hover:text-white transition-colors">{t('nav.contact')}</Link>
             </nav>
           </div>
