@@ -1,65 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-
-interface Article {
-  slug: string
-  category: string
-  title: string
-  excerpt: string
-  readTime: string
-  date: string
-}
-
-const ARTICLES: Article[] = [
-  {
-    slug: 'que-es-un-agente-de-ia',
-    category: 'Agentes de IA',
-    title: '¿Qué es un agente de IA y qué puede hacer por mi negocio?',
-    excerpt: 'Los agentes de IA no son robots de ciencia ficción. Son programas que toman decisiones y ejecutan tareas por ti, sin que tengas que estar presente. Te explicamos qué son y cuándo tiene sentido usarlos.',
-    readTime: '5 min',
-    date: 'Ago 2025',
-  },
-  {
-    slug: 'automatizacion-por-donde-empezar',
-    category: 'Automatización',
-    title: 'Automatización de procesos: por dónde empezar si tu empresa no es tech',
-    excerpt: 'No necesitas un equipo de ingenieros para automatizar. Con los procesos correctos identificados, el impacto llega en semanas. Aquí te contamos cómo priorizar.',
-    readTime: '4 min',
-    date: 'Ago 2025',
-  },
-  {
-    slug: 'software-a-medida-vs-saas',
-    category: 'Software a medida',
-    title: 'Software a medida vs. herramientas SaaS: cuándo elegir cada uno',
-    excerpt: 'No todo tiene que construirse desde cero. Pero hay casos en los que un SaaS genérico te limita más de lo que te ayuda. Te damos un criterio claro para decidir.',
-    readTime: '6 min',
-    date: 'Ago 2025',
-  },
-  {
-    slug: 'ia-lista-para-tu-empresa',
-    category: 'IA para empresas',
-    title: 'Cómo saber si tu empresa está lista para integrar IA',
-    excerpt: 'Antes de integrar IA hay preguntas que hacerse: ¿tienes datos ordenados? ¿hay procesos repetitivos claros? ¿el equipo va a usarlo? Un checklist honesto para saberlo.',
-    readTime: '5 min',
-    date: 'Sep 2025',
-  },
-  {
-    slug: 'procesos-que-puedes-automatizar',
-    category: 'Automatización',
-    title: '5 procesos que casi cualquier empresa puede automatizar hoy',
-    excerpt: 'Desde la gestión de correos hasta los informes semanales. Cinco casos concretos que hemos visto funcionar en empresas medianas, sin grandes inversiones previas.',
-    readTime: '4 min',
-    date: 'Sep 2025',
-  },
-  {
-    slug: 'lo-que-nadie-cuenta-sobre-ia-en-pymes',
-    category: 'IA para empresas',
-    title: 'Lo que nadie te cuenta sobre implementar IA en una pyme',
-    excerpt: 'La mayoría de los fracasos en proyectos de IA no son técnicos. Son organizativos. Datos sin ordenar, objetivos vagos o falta de seguimiento. Aquí va la verdad sin filtros.',
-    readTime: '7 min',
-    date: 'Sep 2025',
-  },
-]
+import { ARTICLES, type Article } from '../data/articles'
 
 const CATEGORIES = ['Todos', ...Array.from(new Set(ARTICLES.map(a => a.category)))]
 
@@ -136,24 +77,22 @@ export default function Blog() {
 
 function ArticleCard({ article }: { article: Article }) {
   return (
-    <div className="bg-white p-8 flex flex-col group">
-      <div className="flex items-center justify-between mb-5">
-        <span className="text-xs font-semibold uppercase tracking-widest text-gray-400">
-          {article.category}
-        </span>
-        <span className="text-xs text-gray-400">{article.date} · {article.readTime}</span>
-      </div>
+    <Link to={`/blog/${article.slug}`} className="bg-white p-8 flex flex-col group">
+      <span className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-5">
+        {article.category}
+      </span>
       <h2 className="text-lg font-black text-black leading-snug group-hover:underline underline-offset-2 decoration-1">
         {article.title}
       </h2>
       <p className="mt-3 text-sm text-gray-600 leading-relaxed flex-1">
         {article.excerpt}
       </p>
-      <div className="mt-6">
+      <div className="mt-6 flex items-center gap-3">
         <span className="text-xs font-semibold text-black border-b border-black/30 pb-0.5 group-hover:border-black transition-colors">
           Leer artículo →
         </span>
+        <span className="text-xs text-gray-400">{article.readTime}</span>
       </div>
-    </div>
+    </Link>
   )
 }
