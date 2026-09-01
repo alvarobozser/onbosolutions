@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import SplitCard from '../components/shared/SplitCard'
+import { useMeta } from '../hooks/useMeta'
 
 function PageHero({ title, subtitle }: { title: string; subtitle: string }) {
   return (
@@ -52,6 +53,10 @@ function CardLeft({
 }
 
 export default function Servicios() {
+  useMeta({
+    title: 'Servicios',
+    description: 'Desarrollo de software a medida e integración de IA para empresas. Aplicaciones web, automatizaciones y herramientas internas construidas por el equipo que te las entrega.',
+  })
   const { t } = useTranslation()
 
   return (

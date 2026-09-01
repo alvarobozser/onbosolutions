@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { useMeta } from '../hooks/useMeta'
 
 const VALUES = [
   { titleKey: 'identity.values.v1_title', descKey: 'identity.values.v1_desc' },
@@ -8,6 +9,10 @@ const VALUES = [
 ] as const
 
 export default function Identidad() {
+  useMeta({
+    title: 'Quiénes somos',
+    description: 'Somos un equipo técnico pequeño que trabaja directamente con el cliente. Quien te escucha en la primera reunión es quien escribe el código.',
+  })
   const { t } = useTranslation()
 
   const narrativeParagraphs = t('identity.narrative_body').split('\n\n')

@@ -35,6 +35,16 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 100vh;
 }
 
+/* ── Page transition ── */
+@keyframes page-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.page-fade {
+  animation: page-fade-in 180ms ease both;
+}
+
 /* ── Scroll arrow bounce ── */
 @keyframes scroll-bounce {
   0%, 100% { transform: translateY(0); opacity: 1; }
@@ -71,6 +81,40 @@ h1, h2, h3, h4, h5, h6 {
 .reveal-visible {
   opacity: 1;
   transform: none;
+}
+
+/* ── Article typography ── */
+.article-body {
+  font-size: 1.0625rem;
+  line-height: 1.88;
+  color: #374151;
+}
+
+.article-lead {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #1f2937;
+  font-weight: 400;
+}
+
+.article-p {
+  margin-top: 1.625rem;
+}
+
+.article-section {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.article-h2 {
+  font-family: var(--font-display);
+  font-size: 1.3125rem;
+  font-weight: 900;
+  color: #000;
+  line-height: 1.3;
+  margin-bottom: 1.125rem;
+  letter-spacing: -0.01em;
 }
 
 @media (prefers-reduced-motion: reduce) {

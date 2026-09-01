@@ -16,8 +16,8 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      {/* pt-16 compensa el header fixed en páginas interiores; home no lo necesita */}
-      <div className={`flex-1 ${isHome ? '' : 'pt-16'}`}>{children}</div>
+      {/* key=pathname → remonta en cada cambio de ruta, dispara el fade */}
+      <div key={pathname} className={`flex-1 page-fade ${isHome ? '' : 'pt-16'}`}>{children}</div>
       <SectionDots />
       <WhatsAppFAB />
       <Footer />

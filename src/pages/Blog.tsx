@@ -2,10 +2,15 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ARTICLES, type Article } from '../data/articles'
 import Reveal from '../components/shared/Reveal'
+import { useMeta } from '../hooks/useMeta'
 
 const CATEGORIES = ['Todos', ...Array.from(new Set(ARTICLES.map(a => a.category)))]
 
 export default function Blog() {
+  useMeta({
+    title: 'Recursos',
+    description: 'Guías prácticas sobre IA y software para empresas. Sin humo, solo lo que necesitas saber para tomar mejores decisiones.',
+  })
   const [active, setActive] = useState('Todos')
 
   const filtered = active === 'Todos'

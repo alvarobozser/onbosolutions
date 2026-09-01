@@ -3,6 +3,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import ContactForm from '../components/contacto/ContactForm'
 import Accordion from '../components/shared/Accordion'
+import { useMeta } from '../hooks/useMeta'
 import { CONTACT_EMAIL, CONTACT_LOCATION, CONTACT_PHONE } from '../config/constants'
 
 const FAQ_KEYS = ['q1', 'q2', 'q3', 'q4', 'q5'] as const
@@ -21,6 +22,10 @@ const INFO_ITEMS: InfoItem[] = [
 ]
 
 export default function Contacto() {
+  useMeta({
+    title: 'Contacto',
+    description: 'Cuéntanos qué necesitas. Te responde alguien del equipo técnico en menos de 48h. Sin reuniones de descubrimiento, sin rodeos.',
+  })
   const { t } = useTranslation()
 
   const faqItems = FAQ_KEYS.map((key) => ({

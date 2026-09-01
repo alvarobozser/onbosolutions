@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { useMeta } from '../hooks/useMeta'
 import CTABanner from '../components/home/CTABanner'
 import Hero from '../components/home/Hero'
 import ServiciosSection from '../components/home/ServiciosSection'
@@ -14,6 +15,10 @@ const SECTIONS = [
 ] as const
 
 export default function Home() {
+  useMeta({
+    title: 'ONBO Solutions',
+    description: 'Software a medida e IA integrada para empresas. Trato directo, sin agencias de por medio. Primera consulta sin coste.',
+  })
   const { setActiveSection } = useActiveSection()
 
   useEffect(() => {
