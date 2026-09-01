@@ -33,7 +33,7 @@ export default function BlogArticle() {
               {article.category}
             </span>
           </div>
-          <h1 className="text-4xl font-black text-black leading-tight">{article.title}</h1>
+          <h1 className="text-3xl font-black text-black leading-tight">{article.title}</h1>
           <p className="mt-4 text-gray-500">{article.readTime} de lectura</p>
         </div>
       </section>

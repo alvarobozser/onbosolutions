@@ -2,6 +2,10 @@ import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
+function scrollToServices() {
+  document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })
+}
+
 export default function Hero() {
   const { t } = useTranslation()
   const shapeRef = useRef<HTMLDivElement>(null)
@@ -9,6 +13,13 @@ export default function Hero() {
   const targetRef = useRef({ x: 0, y: 0 })
   const rafRef = useRef<number>(0)
   const [style, setStyle] = useState<React.CSSProperties>({})
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 60)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   useEffect(() => {
     const tick = () => {
@@ -52,19 +63,19 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative bg-white min-h-[85vh] flex items-center overflow-hidden">
+    <section id="inicio" className="relative bg-white min-h-screen flex items-center overflow-hidden pb-16">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           <div>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-black leading-tight tracking-tight">
+            <h1 className="hero-line text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-black leading-tight tracking-tight">
               {t('hero.title_line1')}<br />
               {t('hero.title_line2')}
             </h1>
-            <p className="mt-6 text-lg text-gray-500 max-w-xl leading-relaxed">
+            <p className="hero-line mt-6 text-lg text-gray-500 max-w-xl leading-relaxed">
               {t('hero.subtitle')}
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="hero-line mt-8 flex flex-wrap gap-4">
               <Link
                 to="/servicios"
                 className="bg-black text-white font-semibold px-6 py-3 text-sm hover:bg-gray-900 transition-colors flex items-center gap-2"
@@ -100,6 +111,26 @@ export default function Hero() {
 
         </div>
       </div>
+
+      {/* Scroll indicator */}
+      <button
+        onClick={scrollToServices}
+        aria-label="Ver servicios"
+        className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 transition-opacity duration-500 ${
+          scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'
+        }`}
+      >
+        <span className="text-xs uppercase tracking-widest text-gray-400 font-medium">Scroll</span>
+        <svg
+          viewBox="0 0 12 20"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          className="w-3 h-5 text-black scroll-arrow"
+        >
+          <path d="M6 0 v14 M1 9 l5 5 5-5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
     </section>
   )
 }

@@ -8,67 +8,67 @@
     "cta": "Contacto"
   },
   "hero": {
-    "title_line1": "Tu negocio, digitalizado",
-    "title_line2": "con IA y software a medida",
-    "subtitle": "Construimos las herramientas digitales que tu empresa necesita e integramos inteligencia artificial donde realmente aporta valor.",
-    "cta_primary": "Cómo te ayudamos",
-    "cta_secondary": "Habla con nosotros"
+    "title_line1": "Software e IA construidos",
+    "title_line2": "para cómo trabaja tu empresa",
+    "subtitle": "Construimos las herramientas que necesitas, con el equipo que te las entrega en persona. Sin intermediarios, sin plazos que se alargan, sin sorpresas en la factura.",
+    "cta_primary": "Ver cómo trabajamos",
+    "cta_secondary": "Cuéntanos tu reto"
   },
   "services": {
-    "section_title": "Qué hacemos",
+    "section_title": "En qué te ayudamos",
     "dev": {
-      "title": "Software a Medida",
-      "subtitle": "Diseñado desde cero para ti",
-      "body": "Construimos aplicaciones y herramientas digitales diseñadas exactamente para cómo trabaja tu empresa. Sin soluciones genéricas que obligan a adaptar tu negocio a la herramienta — lo hacemos al revés.",
-      "cta": "Cuéntanos tu reto",
-      "right_title": "Cómo trabajamos",
-      "process1": "Primero escuchamos",
-      "process1_desc": "Entendemos tu negocio antes de proponer nada.",
-      "process2": "Resultados desde el inicio",
-      "process2_desc": "Entregas incrementales: ves avances desde las primeras semanas.",
-      "process3": "Sin sorpresas",
-      "process3_desc": "Presupuesto cerrado y plazos reales desde el principio."
+      "title": "Tu aplicación, desde cero",
+      "subtitle": "Construida para cómo trabajas tú, no para cómo trabajan otros",
+      "body": "Muchas empresas acaban adaptando su forma de trabajar a la herramienta que encontraron. Nosotros hacemos lo contrario: partimos de cómo funciona tu negocio y construimos exactamente lo que necesita. Sin funciones que no usarás, sin que la herramienta dicte cómo tienes que operar.",
+      "cta": "Cuéntanos qué necesitas",
+      "right_title": "Cómo lo hacemos",
+      "process1": "Entendemos antes de proponer",
+      "process1_desc": "No empezamos a desarrollar hasta que tenemos claro el problema real, no el síntoma que se ve en la superficie.",
+      "process2": "Entregas cada dos semanas",
+      "process2_desc": "Ves código funcionando desde las primeras semanas. Ajustamos sobre algo real, no sobre lo que estaba planificado hace meses.",
+      "process3": "Precio cerrado desde el día uno",
+      "process3_desc": "Lo que acordamos es lo que pagas. Sin extras de última hora, sin 'fuera de scope' arbitrarios."
     },
     "consulting": {
-      "title": "IA Integrada en tu Negocio",
-      "subtitle": "Estrategia clara, implementación real",
-      "body": "Analizamos tus procesos, identificamos dónde la IA genera valor real y te acompañamos en la integración. Sin proyectos piloto que no escalan. Sin promesas vacías.",
-      "cta": "Cuéntanos tu reto",
-      "right_title": "Nuestro compromiso",
-      "metric1": "Diagnóstico honesto: si la IA no aplica, te lo decimos",
-      "metric2": "Sin costes ocultos ni compromisos a largo plazo",
-      "metric3": "KPIs definidos desde el día uno"
+      "title": "IA que trabaja en tu operativa",
+      "subtitle": "Sin pilotos que no escalan. Sin tecnología que no usas.",
+      "body": "Antes de hablar de IA, entendemos cómo trabajas. Luego identificamos qué parte de tu proceso se puede automatizar, acelerar o mejorar con un modelo real. Y si vemos que no aplica, te lo decimos antes de que inviertas un euro en ello.",
+      "cta": "Cuéntanos tu situación",
+      "right_title": "Lo que te garantizamos",
+      "metric1": "Diagnóstico real: si la IA no encaja en tu caso, te lo decimos antes de cobrar nada",
+      "metric2": "Sin licencias ocultas ni compromisos de continuidad obligatorios",
+      "metric3": "El resultado que mediremos definido antes de empezar, no después"
     }
   },
   "cta_banner": {
     "badge": "Primera consulta sin coste",
-    "title_line1": "¿Tienes un reto en mente?",
-    "title_line2": "Cuéntanoslo sin compromiso.",
-    "subtitle": "Analizamos tu situación y te decimos con honestidad qué podemos hacer, cómo y en cuánto tiempo.",
-    "pill1": "Sin coste inicial",
-    "pill2": "Sin letra pequeña",
-    "pill3": "Respuesta en 24/48h",
-    "cta": "Cuéntanos tu proyecto",
+    "title_line1": "¿Tienes un problema concreto?",
+    "title_line2": "Cuéntanoslo directamente.",
+    "subtitle": "Te responde alguien del equipo técnico — la misma persona que va a trabajar en tu proyecto. Sin reuniones de 'descubrimiento' que no llevan a nada. Respuesta real en menos de 48h.",
+    "pill1": "Sin coste la primera consulta",
+    "pill2": "Respuesta del equipo técnico, no un comercial",
+    "pill3": "Plazo estimado en el primer contacto",
+    "cta": "Habla con el equipo",
     "email_label": "O escríbenos directamente a"
   },
   "identity": {
-    "section_title": "Convertimos tus procesos en ventaja competitiva.",
+    "section_title": "Capacidad técnica real, trato directo.",
     "narrative_title": "Por qué existe ONBO",
-    "narrative_body": "Las empresas medianas y pequeñas llevan demasiado tiempo eligiendo entre dos malas opciones: herramientas genéricas que te obligan a adaptar tu negocio a la herramienta, o agencias con presupuestos que no encajan. En ninguno de los dos casos estás eligiendo lo que necesitas — estás eligiendo lo que hay.\n\nFundamos ONBO para cambiar eso. Capacidad técnica real, trato directo y precios que tienen sentido. Sin capas de gestión que encarecen el proyecto y ralentizan las decisiones. Sin meses de espera para ver el primer resultado. Y con la honestidad de decirte si algo no vale la pena antes de que firmes nada.",
-    "quote": "\"Construimos tecnología para que puedas centrarte en lo que sabes hacer. Nosotros nos encargamos de que funcione.\"",
+    "narrative_body": "La mayoría de empresas que buscan software a medida se encuentran con lo mismo: presupuestos que triplican lo razonable, plazos que se alargan sin explicación y un gestor de cuenta que no sabe lo que está pasando por dentro.\n\nFundamos ONBO para hacer lo contrario. Somos un equipo técnico pequeño que trabaja directamente con el cliente: quien te escucha en la primera reunión es quien escribe el código. Eso significa que los problemas se entienden antes, los cambios se aplican más rápido y el resultado encaja con lo que necesitas — no con lo que alguien interpretó en una reunión hace tres semanas.",
+    "quote": "\"El cliente no debería tener que explicar su negocio dos veces: una al comercial y otra al técnico. En ONBO somos la misma persona.\"",
     "quote_author": "Equipo ONBO Solutions",
     "values": {
-      "v1_title": "Trato directo, sin intermediarios",
-      "v1_desc": "Quien te atiende es quien construye. Sin comerciales, sin malentendidos, sin que el encargo pase de mano en mano.",
-      "v2_title": "IA donde aporta, no donde queda bien",
-      "v2_desc": "Solo usamos inteligencia artificial cuando genera un impacto real y medible en tu operación.",
-      "v3_title": "Software pensado para ti",
-      "v3_desc": "Construimos para cómo trabaja tu empresa, no para cómo trabajan otras.",
-      "v4_title": "Resultados desde la primera entrega",
-      "v4_desc": "Trabajamos en fases cortas. Ves avances en semanas, no esperas meses para ver algo."
+      "v1_title": "Quien te atiende, construye",
+      "v1_desc": "Sin comerciales que trasladan el encargo. El técnico que trabaja en tu proyecto es el mismo que responde tu email.",
+      "v2_title": "IA cuando tiene sentido, no cuando queda bien",
+      "v2_desc": "Sólo integramos inteligencia artificial cuando hay un beneficio real y medible. Si no lo hay, te lo decimos.",
+      "v3_title": "Construido para ti, no adaptado de otra cosa",
+      "v3_desc": "Partimos de cómo trabaja tu empresa. No al revés.",
+      "v4_title": "Código funcionando en semanas",
+      "v4_desc": "Dividimos el trabajo en entregas reales. Ves resultados antes de que el proyecto termine."
     },
-    "team_title": "El Equipo",
-    "team_intro": "Detrás de ONBO hay un equipo técnico que cubre desarrollo de software, integración de IA y producto digital. No somos una agencia con capas de gestión: con quien hablas es con quien trabaja en tu proyecto, desde el primer día hasta la entrega.\n\nEso significa menos reuniones de coordinación, menos margen de error y más velocidad. Cada proyecto lo tratamos entre todos — y eso se nota en el resultado.",
+    "team_title": "Quién construye",
+    "team_intro": "ONBO somos tres personas con perfiles técnicos distintos y un modelo de trabajo sencillo: quien habla contigo en la primera reunión es quien va a trabajar en tu proyecto hasta el final. No hay un equipo de entrega diferente. No hay un gestor que coordina a otros.\n\nEso hace que los proyectos avancen más rápido, que los problemas se resuelvan sin pasar por tres manos, y que lo que acuerdas sea exactamente lo que recibes.",
     "team": {
       "architect": {
         "name": "Moicho",
@@ -88,21 +88,21 @@
     }
   },
   "faq": {
-    "section_title": "Lo que necesitas saber",
-    "q1": "¿Qué hace exactamente ONBO Solutions?",
-    "a1": "Construimos software a medida para empresas y ayudamos a integrar inteligencia artificial en sus procesos. No vendemos soluciones de catálogo: analizamos tu caso concreto y construimos lo que tiene sentido para ti.",
-    "q2": "¿Para qué tipo de empresas trabajáis?",
-    "a2": "Trabajamos con pymes, startups y equipos internos de empresas más grandes que necesitan una solución específica que las herramientas estándar no cubren. El tamaño no importa tanto como tener un problema concreto que resolver.",
-    "q3": "¿Cuánto cuesta trabajar con vosotros?",
-    "a3": "Depende del alcance. Lo primero es una conversación gratuita donde entendemos tu situación. A partir de ahí, hacemos una propuesta con precio cerrado y plazos reales, sin letra pequeña. Si no encajamos, te lo decimos.",
-    "q4": "¿Cuánto tiempo tarda un proyecto?",
-    "a4": "Un primer entregable funcional suele estar listo en 2–4 semanas. Los proyectos más completos se dividen en fases para que veas resultados desde el inicio, sin esperar meses a ver algo.",
+    "section_title": "Preguntas frecuentes",
+    "q1": "¿Qué construye ONBO exactamente?",
+    "a1": "Aplicaciones web, herramientas internas, integraciones entre sistemas y soluciones con IA para empresas que necesitan algo que las herramientas estándar no cubren. No trabajamos con plantillas ni plataformas low-code: construimos desde cero para que encaje exactamente con cómo trabajas.",
+    "q2": "¿Con qué tipo de empresas trabajáis?",
+    "a2": "Principalmente con pymes y equipos internos de empresas medianas que tienen un proceso concreto que mejorar o una herramienta que necesitan y no existe como la necesitan. No hay requisito de tamaño — lo que importa es que el problema sea real y concreto.",
+    "q3": "¿Cuánto cuesta?",
+    "a3": "Depende del alcance. Lo primero es una conversación gratuita donde entendemos exactamente qué necesitas. A partir de ahí, hacemos una propuesta con precio cerrado y plazos reales. Si no encajamos, te lo decimos en esa misma primera reunión — sin compromiso ni seguimiento comercial posterior.",
+    "q4": "¿En cuánto tiempo veo resultados?",
+    "a4": "El primer entregable funcional suele estar listo en 2–4 semanas. Los proyectos más grandes se dividen en bloques para que veas código funcionando desde el principio — no esperas meses para ver algo, y cada entrega tiene sentido por sí sola.",
     "q5": "¿Trabajáis en remoto?",
-    "a5": "Sí, trabajamos en remoto desde España y atendemos clientes de cualquier parte. Nos adaptamos a tu zona horaria para las reuniones de seguimiento."
+    "a5": "Sí. Somos un equipo basado en Sevilla pero trabajamos con clientes de cualquier parte de España. Las reuniones de seguimiento son por videollamada y nos adaptamos a tu horario."
   },
   "contact": {
-    "section_title": "Hablemos",
-    "intro": "Cuéntanos qué necesitas. Te respondemos en menos de 24/48 horas con una valoración honesta de si podemos ayudarte y cómo.",
+    "section_title": "Cuéntanoslo",
+    "intro": "Escríbenos qué necesitas. Te responde alguien del equipo técnico — no un gestor, no un bot — con una valoración real de si podemos ayudarte y cómo en menos de 48h.",
     "location_label": "Ubicación",
     "location_value": "España — Sevilla",
     "email_label": "Email",
@@ -112,19 +112,19 @@
       "name": "Nombre",
       "email": "Email",
       "interest": "¿En qué podemos ayudarte?",
-      "interest_dev": "Software a medida",
-      "interest_consulting": "IA en mis procesos",
+      "interest_dev": "Quiero una aplicación propia",
+      "interest_consulting": "Quiero integrar IA en mi empresa",
       "interest_other": "Tengo una duda / otro",
       "phone": "Teléfono (opcional)",
-      "message": "Cuéntanos tu situación",
+      "message": "Cuéntanos qué necesitas",
       "submit": "Enviar mensaje",
       "sending": "Enviando...",
-      "success": "Mensaje recibido. Te respondemos en menos de 24/48h.",
+      "success": "Mensaje recibido. Te responde el equipo técnico en menos de 48h.",
       "error": "Algo salió mal. Inténtalo de nuevo o escríbenos directamente."
     }
   },
   "footer": {
-    "tagline": "Software e IA para empresas que quieren crecer de verdad.",
+    "tagline": "Software e IA construidos por el equipo que te los entrega.",
     "rights": "Todos los derechos reservados."
   }
 }

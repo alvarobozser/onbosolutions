@@ -8,9 +8,11 @@ import Blog from './pages/Blog'
 import BlogArticle from './pages/BlogArticle'
 import Privacidad from './pages/Privacidad'
 import Servicios from './pages/Servicios'
+import { ActiveSectionProvider } from './context/ActiveSectionContext'
 
 export default function App() {
   return (
+    <ActiveSectionProvider>
     <HashRouter>
       <ScrollToTop />
       <Routes>
@@ -23,5 +25,6 @@ export default function App() {
         <Route element={<Layout><Privacidad /></Layout>} path="/privacidad" />
       </Routes>
     </HashRouter>
+    </ActiveSectionProvider>
   )
 }

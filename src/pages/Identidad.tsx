@@ -20,7 +20,7 @@ export default function Identidad() {
           <p className="text-xs uppercase tracking-widest text-gray-400 mb-4">
             {t('nav.identity')}
           </p>
-          <h1 className="text-5xl lg:text-6xl font-black text-black leading-tight max-w-xl">
+          <h1 className="text-4xl lg:text-5xl font-black text-black leading-tight max-w-xl">
             {t('identity.section_title')}
           </h1>
         </div>

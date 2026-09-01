@@ -8,12 +8,12 @@ export default function CTABanner() {
   const { t } = useTranslation()
 
   return (
-    <section className="bg-black text-white py-24">
+    <section className="bg-black text-white py-16 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <span className="inline-block border border-white/30 text-xs uppercase tracking-widest px-3 py-1.5 mb-8">
+        <span className="inline-block border border-white/30 text-xs uppercase tracking-widest px-3 py-1.5 mb-6 sm:mb-8">
           {t('cta_banner.badge')}
         </span>
-        <h2 className="text-4xl sm:text-5xl font-black leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight">
           {t('cta_banner.title_line1')}<br />
           {t('cta_banner.title_line2')}
         </h2>

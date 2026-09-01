@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ARTICLES, type Article } from '../data/articles'
+import Reveal from '../components/shared/Reveal'
 
 const CATEGORIES = ['Todos', ...Array.from(new Set(ARTICLES.map(a => a.category)))]
 
@@ -48,9 +49,11 @@ export default function Blog() {
       {/* Grid de artículos */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-black/10">
-            {filtered.map(article => (
-              <ArticleCard key={article.slug} article={article} />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filtered.map((article, i) => (
+              <Reveal key={article.slug} delay={i * 60}>
+                <ArticleCard article={article} />
+              </Reveal>
             ))}
           </div>
         </div>
@@ -77,7 +80,10 @@ export default function Blog() {
 
 function ArticleCard({ article }: { article: Article }) {
   return (
-    <Link to={`/blog/${article.slug}`} className="bg-white p-8 flex flex-col group">
+    <Link
+      to={`/blog/${article.slug}`}
+      className="border-2 border-black p-8 flex flex-col group hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 bg-white"
+    >
       <span className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-5">
         {article.category}
       </span>
