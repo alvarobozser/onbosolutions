@@ -7,6 +7,16 @@ import IdentidadSection from '../components/home/IdentidadSection'
 import BlogSection from '../components/home/BlogSection'
 import { useActiveSection } from '../context/ActiveSectionContext'
 
+function ChevronBreak() {
+  return (
+    <div className="flex justify-center items-center py-10 bg-white" aria-hidden="true">
+      <svg viewBox="0 0 20 16" fill="currentColor" className="w-5 h-4 text-black opacity-[0.08]">
+        <path d="M0 0h12l8 8-8 8H0l8-8L0 0z" />
+      </svg>
+    </div>
+  )
+}
+
 const SECTIONS = [
   { id: 'inicio',        section: 'home'          },
   { id: 'servicios',     section: 'servicios'     },
@@ -48,8 +58,11 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <ChevronBreak />
       <ServiciosSection />
+      <ChevronBreak />
       <IdentidadSection />
+      <ChevronBreak />
       <BlogSection />
       <CTABanner />
     </main>

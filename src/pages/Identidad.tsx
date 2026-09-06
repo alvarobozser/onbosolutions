@@ -1,5 +1,49 @@
+import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useMeta } from '../hooks/useMeta'
+
+const STATS = [
+  { target: 3,    prefix: '',  suffix: '',  label: 'Personas en el equipo' },
+  { target: 15,   prefix: '+', suffix: '',  label: 'Proyectos entregados'  },
+  { target: 2022, prefix: '',  suffix: '',  label: 'Año de fundación'      },
+] as const
+
+function useCountUp(target: number, duration = 1200) {
+  const [count, setCount] = useState(0)
+  const startedRef = useRef(false)
+  const ref = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && !startedRef.current) {
+        startedRef.current = true
+        const start = performance.now()
+        const tick = (now: number) => {
+          const t = Math.min((now - start) / duration, 1)
+          setCount(Math.round((1 - Math.pow(1 - t, 3)) * target))
+          if (t < 1) requestAnimationFrame(tick)
+        }
+        requestAnimationFrame(tick)
+      }
+    }, { threshold: 0.4 })
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [target, duration])
+  return { count, ref }
+}
+
+function StatItem({ target, prefix, suffix, label }: (typeof STATS)[number]) {
+  const { count, ref } = useCountUp(target)
+  return (
+    <div ref={ref} className="text-center sm:text-left">
+      <p className="text-4xl sm:text-5xl font-black text-black tabular-nums" style={{ fontFamily: 'var(--font-display)' }}>
+        {prefix}{count.toLocaleString('es-ES')}{suffix}
+      </p>
+      <p className="mt-1 text-sm text-gray-500">{label}</p>
+    </div>
+  )
+}
 
 const VALUES = [
   { titleKey: 'identity.values.v1_title', descKey: 'identity.values.v1_desc' },
@@ -28,6 +72,9 @@ export default function Identidad() {
           <h1 className="text-4xl lg:text-5xl font-black text-black leading-tight max-w-xl">
             {t('identity.section_title')}
           </h1>
+          <div className="mt-10 flex flex-col sm:flex-row gap-8 sm:gap-16">
+            {STATS.map((s) => <StatItem key={s.label} {...s} />)}
+          </div>
         </div>
       </section>
 

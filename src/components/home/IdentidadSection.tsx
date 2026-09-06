@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Reveal from '../shared/Reveal'
 
@@ -8,6 +9,52 @@ const VALUES = [
   { titleKey: 'identity.values.v4_title', descKey: 'identity.values.v4_desc' },
 ] as const
 
+const STATS = [
+  { target: 3,    prefix: '',  suffix: '',  label: 'Personas en el equipo' },
+  { target: 15,   prefix: '+', suffix: '',  label: 'Proyectos entregados'  },
+  { target: 2022, prefix: '',  suffix: '',  label: 'Año de fundación'      },
+] as const
+
+function useCountUp(target: number, duration = 1200) {
+  const [count, setCount] = useState(0)
+  const startedRef = useRef(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && !startedRef.current) {
+        startedRef.current = true
+        const start = performance.now()
+        const tick = (now: number) => {
+          const t = Math.min((now - start) / duration, 1)
+          const eased = 1 - Math.pow(1 - t, 3)
+          setCount(Math.round(eased * target))
+          if (t < 1) requestAnimationFrame(tick)
+        }
+        requestAnimationFrame(tick)
+      }
+    }, { threshold: 0.4 })
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [target, duration])
+
+  return { count, ref }
+}
+
+function StatItem({ target, prefix, suffix, label }: (typeof STATS)[number]) {
+  const { count, ref } = useCountUp(target)
+  return (
+    <div ref={ref} className="text-center sm:text-left">
+      <p className="text-4xl sm:text-5xl font-black text-black tabular-nums" style={{ fontFamily: 'var(--font-display)' }}>
+        {prefix}{count.toLocaleString('es-ES')}{suffix}
+      </p>
+      <p className="mt-1 text-sm text-gray-500">{label}</p>
+    </div>
+  )
+}
+
 export default function IdentidadSection() {
   const { t } = useTranslation()
   const narrativeParagraphs = t('identity.narrative_body').split('\n\n')
@@ -15,7 +62,7 @@ export default function IdentidadSection() {
   return (
     <section id="quienes-somos" className="bg-white">
 
-      {/* Header */}
+      {/* Header + Stats */}
       <div className="py-12 sm:py-20 border-b border-black/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal variant="left">
@@ -25,6 +72,11 @@ export default function IdentidadSection() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-black leading-tight max-w-xl">
               {t('identity.section_title')}
             </h2>
+          </Reveal>
+          <Reveal delay={120}>
+            <div className="mt-10 flex flex-col sm:flex-row gap-8 sm:gap-16">
+              {STATS.map((s) => <StatItem key={s.label} {...s} />)}
+            </div>
           </Reveal>
         </div>
       </div>
