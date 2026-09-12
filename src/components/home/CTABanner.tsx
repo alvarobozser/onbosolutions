@@ -10,7 +10,10 @@ export default function CTABanner() {
   return (
     <section className="bg-black text-white py-16 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <span className="inline-block border border-white/30 text-xs uppercase tracking-widest px-3 py-1.5 mb-6 sm:mb-8">
+        <span
+          className="inline-block border text-xs uppercase tracking-widest px-3 py-1.5 mb-6 sm:mb-8 focus-accent"
+          style={{ borderColor: 'var(--accent)', color: 'var(--accent)' }}
+        >
           {t('cta_banner.badge')}
         </span>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight">
@@ -22,15 +25,18 @@ export default function CTABanner() {
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           {PILLS.map((key) => (
-            <span key={key} className="border border-white/20 text-xs uppercase tracking-wide px-3 py-1.5 flex items-center gap-1.5">
-              <span>✓</span> {t(`cta_banner.${key}`)}
+            <span
+              key={key}
+              className="border border-white/20 text-xs uppercase tracking-wide px-3 py-1.5 flex items-center gap-1.5"
+            >
+              <span aria-hidden="true" style={{ color: 'var(--accent)' }}>✓</span> {t(`cta_banner.${key}`)}
             </span>
           ))}
         </div>
         <div className="mt-10">
           <Link
             to="/contacto"
-            className="inline-block bg-white text-black font-semibold px-8 py-4 text-sm hover:bg-gray-100 transition-colors"
+            className="btn-accent inline-block font-semibold px-8 py-4 text-sm focus-accent transition-colors"
           >
             {t('cta_banner.cta')} →
           </Link>

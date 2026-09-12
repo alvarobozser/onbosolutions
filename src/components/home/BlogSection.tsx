@@ -32,19 +32,24 @@ export default function BlogSection() {
       <div className="bg-white border-b border-black/10 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 flex-wrap">
-            {CATEGORIES.map(cat => (
-              <button
-                key={cat}
-                onClick={() => setActive(cat)}
-                className={`text-xs font-semibold px-3 py-1.5 border transition-colors ${
-                  active === cat
-                    ? 'bg-black text-white border-black'
-                    : 'bg-white text-gray-600 border-black/20 hover:border-black hover:text-black'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
+            {CATEGORIES.map(cat => {
+              const isActive = active === cat
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setActive(cat)}
+                  aria-pressed={isActive}
+                  className={`text-xs font-semibold px-3 py-1.5 border transition-colors focus-accent ${
+                    isActive
+                      ? 'text-black border-transparent'
+                      : 'bg-white text-gray-600 border-black/20 hover:border-black hover:text-black'
+                  }`}
+                  style={isActive ? { backgroundColor: 'var(--accent)', borderColor: 'var(--accent)' } : undefined}
+                >
+                  {cat}
+                </button>
+              )
+            })}
           </div>
         </div>
       </div>
@@ -57,8 +62,13 @@ export default function BlogSection() {
               <Reveal key={article.slug} delay={i * 60} variant="scale">
                 <Link
                   to={`/blog/${article.slug}`}
-                  className="border-2 border-black p-6 sm:p-8 flex flex-col group hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 bg-white h-full"
+                  className="group relative border-2 border-black p-6 sm:p-8 flex flex-col hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 bg-white h-full overflow-hidden focus-accent"
                 >
+                  <span
+                    aria-hidden="true"
+                    className="absolute left-0 top-0 bottom-0 w-0 group-hover:w-1.5 transition-all duration-300 ease-out"
+                    style={{ backgroundColor: 'var(--accent)' }}
+                  />
                   <span className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4 sm:mb-5">
                     {article.category}
                   </span>

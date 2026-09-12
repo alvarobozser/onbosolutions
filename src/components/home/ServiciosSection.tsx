@@ -24,7 +24,7 @@ function CardLeft({
       <ul className="mt-6 space-y-2">
         {details.map((d) => (
           <li key={d} className="flex items-start gap-2 text-sm text-gray-700">
-            <span className="mt-0.5 font-bold">—</span>
+            <span aria-hidden="true" className="mt-1.5 shrink-0" style={{ width: '0.5rem', height: '0.5rem', backgroundColor: 'var(--accent)' }} />
             <span>{d}</span>
           </li>
         ))}
@@ -32,7 +32,7 @@ function CardLeft({
       <div className="mt-8">
         <Link
           to="/contacto"
-          className="inline-flex items-center gap-2 bg-black text-white text-sm font-semibold px-6 py-3 hover:bg-gray-900 transition-colors"
+          className="inline-flex items-center gap-2 bg-black text-white text-sm font-semibold px-6 py-3 hover:bg-gray-900 focus-accent transition-colors"
         >
           {cta} →
         </Link>
@@ -113,7 +113,7 @@ export default function ServiciosSection() {
                   <ul className="space-y-4">
                     {(['metric1', 'metric2', 'metric3'] as const).map((key) => (
                       <li key={key} className="flex items-start gap-3 text-sm">
-                        <span className="text-white mt-0.5 shrink-0">✓</span>
+                        <span aria-hidden="true" className="mt-0.5 shrink-0" style={{ color: 'var(--accent)' }}>✓</span>
                         <span className="text-gray-300">{t(`services.consulting.${key}`)}</span>
                       </li>
                     ))}
