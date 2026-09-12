@@ -24,6 +24,7 @@ export default function Hero() {
   }, [])
 
   useEffect(() => {
+    if (typeof window.matchMedia !== 'function') return
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
     reducedMotionRef.current = mediaQuery.matches
     const onPreferenceChange = () => {
@@ -48,22 +49,14 @@ export default function Hero() {
       const lerpFactor = 0.07
       tiltRef.current.x += (targetRef.current.x - tiltRef.current.x) * lerpFactor
       tiltRef.current.y += (targetRef.current.y - tiltRef.current.y) * lerpFactor
-
       const { x, y } = tiltRef.current
-      const rx = (-y * 30).toFixed(1)
-      const ry = (x * 30).toFixed(1)
-      const shadowX = (x * 16).toFixed(1)
-      const shadowY = (y * 16).toFixed(1)
-
       setStyle({
-        transform: `perspective(500px) rotateX(${rx}deg) rotateY(${ry}deg)`,
-        filter: `drop-shadow(${shadowX}px ${shadowY}px 18px rgba(0,0,0,0.35))`,
+        transform: `perspective(500px) rotateX(${(-y * 30).toFixed(1)}deg) rotateY(${(x * 30).toFixed(1)}deg)`,
+        filter: `drop-shadow(${(x * 16).toFixed(1)}px ${(y * 16).toFixed(1)}px 18px rgba(0,0,0,0.35))`,
         willChange: 'transform, filter',
         transformOrigin: '50% 50%',
       })
-
-      const settled = Math.abs(targetRef.current.x - x) < 0.001 && Math.abs(targetRef.current.y - y) < 0.001
-      if (settled) {
+      if (Math.abs(targetRef.current.x - x) < 0.001 && Math.abs(targetRef.current.y - y) < 0.001) {
         animationRunningRef.current = false
         return
       }
@@ -72,14 +65,12 @@ export default function Hero() {
     rafRef.current = requestAnimationFrame(tick)
   }
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     if (!shapeRef.current) return
-    const r = shapeRef.current.getBoundingClientRect()
-    const cx = r.left + r.width / 2
-    const cy = r.top + r.height / 2
+    const rect = shapeRef.current.getBoundingClientRect()
     targetRef.current = {
-      x: Math.max(-1, Math.min(1, (e.clientX - cx) / (r.width * 0.8))),
-      y: Math.max(-1, Math.min(1, (e.clientY - cy) / (r.height * 0.8))),
+      x: Math.max(-1, Math.min(1, (event.clientX - (rect.left + rect.width / 2)) / (rect.width * 0.8))),
+      y: Math.max(-1, Math.min(1, (event.clientY - (rect.top + rect.height / 2)) / (rect.height * 0.8))),
     }
     startTiltAnimation()
   }
@@ -102,22 +93,15 @@ export default function Hero() {
               {t('hero.subtitle')}
             </p>
             <div className="hero-line mt-8 flex flex-wrap gap-4">
-              <Link
-                to="/servicios"
-                className="bg-black text-white font-semibold px-6 py-3 text-sm hover:bg-gray-900 transition-colors flex items-center gap-2"
-              >
+              <button type="button" onClick={scrollToServices} className="bg-black text-white font-semibold px-6 py-3 text-sm hover:bg-gray-900 transition-colors flex items-center gap-2">
                 {t('hero.cta_primary')} →
-              </Link>
-              <Link
-                to="/contacto"
-                className="border border-black text-black font-semibold px-6 py-3 text-sm hover:bg-black hover:text-white transition-colors"
-              >
+              </button>
+              <Link to="/contacto" className="border border-black text-black font-semibold px-6 py-3 text-sm hover:bg-black hover:text-white transition-colors">
                 {t('hero.cta_secondary')}
               </Link>
             </div>
           </div>
 
-          {/* Logo mark 3D — tilt con el ratón */}
           <div
             ref={shapeRef}
             className="hidden lg:flex items-center justify-center cursor-crosshair"
@@ -125,12 +109,7 @@ export default function Hero() {
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
           >
-            <svg
-              viewBox="0 0 20 16"
-              fill="black"
-              className="w-[200px] h-[160px] select-none"
-              style={style}
-            >
+            <svg viewBox="0 0 20 16" fill="black" className="w-[200px] h-[160px] select-none" style={style}>
               <path d="M0 0h12l8 8-8 8H0l8-8L0 0z" />
             </svg>
           </div>
@@ -138,7 +117,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <button
         onClick={scrollToServices}
         aria-label="Ver servicios"
@@ -147,13 +125,7 @@ export default function Hero() {
         }`}
       >
         <span className="text-xs uppercase tracking-widest text-gray-400 font-medium">Scroll</span>
-        <svg
-          viewBox="0 0 12 20"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          className="w-3 h-5 text-black scroll-arrow"
-        >
+        <svg viewBox="0 0 12 20" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-3 h-5 text-black scroll-arrow">
           <path d="M6 0 v14 M1 9 l5 5 5-5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </button>

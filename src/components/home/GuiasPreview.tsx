@@ -32,7 +32,7 @@ function GuiaCard({ category, title, date, pattern }: GuiaCardProps) {
 
   return (
     <Link
-      to="/guias"
+      to="/"
       className="group border border-black/10 flex flex-col hover:border-black transition-colors overflow-hidden"
     >
       <div
@@ -72,7 +72,7 @@ export default function GuiasPreview() {
           {/* CTA card */}
           <div className="bg-black flex items-center justify-center p-8">
             <Link
-              to="/guias"
+              to="/"
               className="text-center text-white group"
             >
               <p className="text-4xl font-black">10+</p>

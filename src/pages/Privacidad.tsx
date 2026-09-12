@@ -108,10 +108,7 @@ export default function Privacidad() {
           </Block>
 
           <div className="mt-12 pt-8 border-t border-black/10">
-            <Link
-              to="/contacto"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-black border border-black px-5 py-2.5 hover:bg-black hover:text-white transition-colors"
-            >
+            <Link to="/contacto" className="privacy-back-link inline-flex items-center gap-2 text-sm font-semibold text-white bg-black border border-black px-5 py-2.5 hover:bg-gray-900 hover:text-white transition-colors">
               ← Volver al contacto
             </Link>
           </div>
@@ -123,6 +120,8 @@ export default function Privacidad() {
         .prose-custom p  { color: #374151; line-height: 1.75; margin-bottom: 1rem; font-size: 0.9375rem; }
         .prose-custom ul { color: #374151; line-height: 1.75; margin: 0.75rem 0 1rem 1.25rem; list-style: disc; font-size: 0.9375rem; }
         .prose-custom a  { color: #000; text-decoration: underline; text-underline-offset: 3px; }
+        .prose-custom .privacy-back-link { color: #fff; background-color: #000; text-decoration: none; opacity: 1; }
+        .prose-custom .privacy-back-link:hover { color: #fff; opacity: 1; }
         .prose-custom a:hover { opacity: 0.7; }
         .prose-custom strong { color: #000; font-weight: 600; }
       `}</style>

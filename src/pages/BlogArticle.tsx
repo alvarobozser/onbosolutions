@@ -17,7 +17,7 @@ export default function BlogArticle() {
         <div className="text-center px-4">
           <p className="text-5xl font-black text-black mb-4">404</p>
           <p className="text-gray-500 mb-8">Este artículo no existe.</p>
-          <Link to="/blog" className="text-sm font-semibold text-black border-b border-black pb-0.5">
+          <Link to="/" className="text-sm font-semibold text-black border-b border-black pb-0.5">
             ← Volver al blog
           </Link>
         </div>
@@ -28,27 +28,16 @@ export default function BlogArticle() {
   return (
     <main className="bg-white">
 
-      {/* Header del artículo */}
       <section className="pt-14 pb-12 border-b border-black/10">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 mb-8">
-            <Link to="/blog" className="text-xs text-gray-400 hover:text-black transition-colors font-medium">
-              ← Recursos
-            </Link>
+            <Link to="/" className="text-xs text-gray-400 hover:text-black transition-colors font-medium">← Recursos</Link>
             <span className="text-gray-200">|</span>
-            <span className="text-xs font-semibold uppercase tracking-widest text-gray-400">
-              {article.category}
-            </span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-gray-400">{article.category}</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-black text-black leading-tight tracking-tight">
-            {article.title}
-          </h1>
-          <p className="mt-5 text-lg text-gray-500 leading-relaxed max-w-xl">
-            {article.excerpt}
-          </p>
-          <p className="mt-5 text-xs uppercase tracking-widest text-gray-400 font-medium">
-            {article.readTime} de lectura
-          </p>
+          <h1 className="text-3xl sm:text-4xl font-black text-black leading-tight tracking-tight">{article.title}</h1>
+          <p className="mt-5 text-lg text-gray-500 leading-relaxed max-w-xl">{article.excerpt}</p>
+          <p className="mt-5 text-xs uppercase tracking-widest text-gray-400 font-medium">{article.readTime} de lectura</p>
         </div>
       </section>
 
@@ -77,10 +66,7 @@ export default function BlogArticle() {
             <p className="font-black text-xl">¿Aplica esto a tu empresa?</p>
             <p className="text-gray-400 mt-1 text-sm">Cuéntanos tu caso y te respondemos sin rodeos.</p>
           </div>
-          <Link
-            to="/contacto"
-            className="bg-white text-black font-semibold px-6 py-3 text-sm hover:bg-gray-100 transition-colors shrink-0"
-          >
+          <Link to="/contacto" className="bg-white text-black font-semibold px-6 py-3 text-sm hover:bg-gray-100 transition-colors shrink-0">
             Contactar →
           </Link>
         </div>

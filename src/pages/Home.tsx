@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useMeta } from '../hooks/useMeta'
+import { useLocation, useNavigate } from 'react-router-dom'
 import CTABanner from '../components/home/CTABanner'
 import Hero from '../components/home/Hero'
 import ServiciosSection from '../components/home/ServiciosSection'
@@ -10,9 +11,7 @@ import { useActiveSection } from '../context/useActiveSection'
 function ChevronBreak() {
   return (
     <div className="flex justify-center items-center py-3 bg-white" aria-hidden="true">
-      <svg viewBox="0 0 20 16" fill="currentColor" className="w-5 h-4 text-black opacity-[0.08]">
-        <path d="M0 0h12l8 8-8 8H0l8-8L0 0z" />
-      </svg>
+      <svg viewBox="0 0 20 16" fill="currentColor" className="w-5 h-4 text-black opacity-[0.08]"><path d="M0 0h12l8 8-8 8H0l8-8L0 0z" /></svg>
     </div>
   )
 }
@@ -30,8 +29,23 @@ export default function Home() {
     description: 'Software a medida e IA integrada para empresas. Trato directo, sin agencias de por medio. Primera consulta sin coste.',
   })
   const { setActiveSection } = useActiveSection()
+  const location = useLocation()
+  const navigate = useNavigate()
 
   useEffect(() => {
+    const sectionId = (location.state as { scrollTo?: string } | null)?.scrollTo
+    if (!sectionId) return
+
+    const frame = window.requestAnimationFrame(() => {
+      scrollToSection(sectionId)
+      navigate('/', { replace: true, state: null })
+    })
+
+    return () => window.cancelAnimationFrame(frame)
+  }, [location.state, navigate])
+
+  useEffect(() => {
+    if (!('IntersectionObserver' in window)) return
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
@@ -67,4 +81,8 @@ export default function Home() {
       <CTABanner />
     </main>
   )
+}
+
+function scrollToSection(id: string) {
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 }

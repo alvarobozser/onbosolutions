@@ -3,13 +3,9 @@ import Layout from './components/layout/Layout'
 import ScrollToTop from './components/layout/ScrollToTop'
 import Contacto from './pages/Contacto'
 import Home from './pages/Home'
-import Identidad from './pages/Identidad'
-import Blog from './pages/Blog'
 import BlogArticle from './pages/BlogArticle'
 import NotFound from './pages/NotFound'
 import Privacidad from './pages/Privacidad'
-import Servicios from './pages/Servicios'
-import Guias from './pages/Guias'
 import { ActiveSectionProvider } from './context/ActiveSectionContext'
 
 export default function App() {
@@ -19,12 +15,8 @@ export default function App() {
       <ScrollToTop />
       <Routes>
         <Route element={<Layout><Home /></Layout>} path="/" />
-        <Route element={<Layout><Servicios /></Layout>} path="/servicios" />
-        <Route element={<Layout><Identidad /></Layout>} path="/identidad" />
         <Route element={<Layout><Contacto /></Layout>} path="/contacto" />
-        <Route element={<Layout><Blog /></Layout>} path="/blog" />
         <Route element={<Layout><BlogArticle /></Layout>} path="/blog/:slug" />
-        <Route element={<Layout><Guias /></Layout>} path="/guias" />
         <Route element={<Layout><Privacidad /></Layout>} path="/privacidad" />
         <Route element={<Layout><NotFound /></Layout>} path="*" />
       </Routes>

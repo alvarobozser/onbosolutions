@@ -2,6 +2,7 @@ import { ArrowRight } from 'lucide-react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { type Category, CATEGORIES, type Guia, GUIAS } from '../data/guias'
+import Reveal from '../components/shared/Reveal'
 import { useMeta } from '../hooks/useMeta'
 
 const PATTERNS: Record<Guia['pattern'], string> = {
@@ -16,22 +17,37 @@ const PATTERNS: Record<Guia['pattern'], string> = {
 function GuiaCard({ guia, lang }: { guia: Guia; lang: string }) {
   const { t } = useTranslation()
   const title = lang.startsWith('en') ? guia.titleEn : guia.titleEs
-  const formattedDate = new Date(guia.date).toLocaleDateString('es-ES', { day: '2-digit', month: 'short', year: 'numeric' })
+  const formattedDate = new Date(guia.date).toLocaleDateString('es-ES', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric',
+  })
 
   return (
-    <article className="group border border-black/10 flex flex-col hover:border-black transition-colors overflow-hidden">
-      <div className="h-40 bg-gray-50 relative" style={{ backgroundImage: PATTERNS[guia.pattern] }}>
-        <span className="absolute top-3 left-3 bg-black text-white text-xs uppercase tracking-widest px-2 py-1">
-          {t(`guides.categories.${guia.category}`)}
-        </span>
-      </div>
-      <div className="p-6 flex flex-col flex-1">
-        <h2 className="text-sm font-semibold text-black leading-snug flex-1 group-hover:underline">
-          {title}
-        </h2>
-        <div className="mt-4 flex items-center justify-between text-xs text-gray-400">
-          <span>{formattedDate}</span>
-          <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+    <article className="h-full">
+      <div className="h-full overflow-hidden border border-black/10">
+        <div
+        className="h-40 bg-gray-50 relative border-b border-black/10"
+          style={{ backgroundImage: PATTERNS[guia.pattern] }}
+        >
+          <span
+            className="absolute top-3 left-3 bg-black text-white text-xs uppercase tracking-[0.16em] px-2 py-1"
+            style={{ fontFamily: 'var(--font-display)' }}
+          >
+            {t(`guides.categories.${guia.category}`)}
+          </span>
+        </div>
+        <div className="p-6 flex flex-col flex-1">
+          <h2
+            className="text-sm sm:text-base font-semibold text-black leading-snug flex-1"
+            style={{ fontFamily: 'var(--font-display)' }}
+          >
+            {title}
+          </h2>
+          <div className="mt-5 flex items-center justify-between text-xs text-gray-500">
+            <span>{formattedDate}</span>
+            <ArrowRight size={14} className="text-black" />
+          </div>
         </div>
       </div>
     </article>
@@ -41,7 +57,8 @@ function GuiaCard({ guia, lang }: { guia: Guia; lang: string }) {
 export default function Guias() {
   useMeta({
     title: 'Guías',
-    description: 'Guías prácticas de software, automatización e inteligencia artificial para empresas.',
+    description:
+      'Guías prácticas de software, automatización e inteligencia artificial para empresas.',
   })
   const { t, i18n } = useTranslation()
   const [activeCategory, setActiveCategory] = useState<Category | null>(null)
@@ -51,46 +68,50 @@ export default function Guias() {
     : GUIAS
 
   return (
-    <main className="py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-5xl font-black text-black">{t('guides.section_title')}</h1>
+    <main>
+      <section className="py-20 bg-white border-b border-black/10"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><h1 className="text-5xl font-black text-black">{t('guides.section_title')}</h1></div></section>
 
-        {/* Category filter */}
-        <div className="mt-10 flex flex-wrap gap-2">
-          <button
-            onClick={() => setActiveCategory(null)}
-            className={`px-4 py-2 text-xs uppercase tracking-widest border transition-colors ${
-              activeCategory === null
-                ? 'bg-black text-white border-black'
-                : 'border-black/20 text-gray-600 hover:border-black hover:text-black'
-            }`}
-          >
-            Todos
-          </button>
-          {CATEGORIES.map((cat) => (
+      <section className="bg-white py-5 border-b border-black/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap gap-2">
             <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 text-xs uppercase tracking-widest border transition-colors ${
-                activeCategory === cat
-                  ? 'bg-black text-white border-black'
-                  : 'border-black/20 text-gray-600 hover:border-black hover:text-black'
-              }`}
+              onClick={() => setActiveCategory(null)}
+              aria-pressed={activeCategory === null}
+              className={`chip ${activeCategory === null ? 'is-active' : ''}`}
             >
-              {t(`guides.categories.${cat}`)}
+              Todos
             </button>
-          ))}
+            {CATEGORIES.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                aria-pressed={activeCategory === cat}
+                className={`chip ${activeCategory === cat ? 'is-active' : ''}`}
+              >
+                {t(`guides.categories.${cat}`)}
+              </button>
+            ))}
+          </div>
         </div>
+      </section>
 
-        {/* Grid */}
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-black/10">
-          {filtered.map((guia) => (
-            <div key={guia.slug} className="bg-white">
-              <GuiaCard guia={guia} lang={i18n.language} />
+      <section className="bg-white py-14 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {filtered.length === 0 ? (
+            <p className="py-16 text-center text-sm text-gray-500">
+              No hay guías en esta categoría.
+            </p>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filtered.map((guia, i) => (
+                <Reveal key={guia.slug} delay={i * 80}>
+                  <GuiaCard guia={guia} lang={i18n.language} />
+                </Reveal>
+              ))}
             </div>
-          ))}
+          )}
         </div>
-      </div>
+      </section>
     </main>
   )
 }

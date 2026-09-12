@@ -8,14 +8,14 @@ describe('App routing', () => {
     window.history.replaceState(null, '', '/')
   })
 
-  it('renderiza la ruta de guías', async () => {
+  it('renderiza el home como página principal', async () => {
     // Arrange
-    window.history.replaceState(null, '', '/#/guias')
+    window.history.replaceState(null, '', '/#/')
 
     // Act
     render(<App />)
 
     // Assert
-    expect(await screen.findByRole('heading', { name: 'Guías prácticas' })).toBeInTheDocument()
+    expect(await screen.findByRole('heading', { name: /Software e IA construidos/ })).toBeInTheDocument()
   })
 })

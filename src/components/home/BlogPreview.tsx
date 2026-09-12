@@ -17,7 +17,7 @@ export default function BlogPreview() {
               </h2>
             </div>
             <Link
-              to="/blog"
+              to="/"
               className="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-black border-b border-black/30 pb-0.5 hover:border-black transition-colors shrink-0 mb-1"
             >
               Ver todos →
@@ -52,7 +52,7 @@ export default function BlogPreview() {
         <Reveal delay={300} variant="up">
           <div className="mt-8 sm:hidden">
             <Link
-              to="/blog"
+              to="/"
               className="text-sm font-semibold text-black border-b border-black/30 pb-0.5"
             >
               Ver todos los recursos →

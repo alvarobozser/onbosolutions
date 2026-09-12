@@ -1,10 +1,16 @@
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { CONTACT_EMAIL } from '../../config/constants'
 
 export default function Footer() {
   const { t } = useTranslation()
+  const navigate = useNavigate()
   const year = new Date().getFullYear()
+
+  function goToSection(sectionId: string) {
+    navigate('/')
+    window.setTimeout(() => document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' }), 0)
+  }
 
   return (
     <footer className="bg-black text-white">
@@ -12,11 +18,11 @@ export default function Footer() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-12 sm:mb-16">
           {/* Brand */}
           <div className="col-span-2 lg:col-span-2">
-            <Link to="/" className="inline-flex items-center gap-2 text-xl font-black tracking-tight text-white uppercase mb-4" style={{ fontFamily: 'var(--font-display)' }}>
-              <svg viewBox="0 0 20 16" fill="currentColor" className="w-5 h-4 shrink-0" aria-hidden="true">
-                <path d="M0 0h12l8 8-8 8H0l8-8L0 0z" />
-              </svg>
-              ONBO
+            <Link to="/" className="inline-flex text-white mb-4" aria-label="ONBO Solutions">
+              <span className="inline-flex items-center gap-2 text-xl font-black tracking-tight text-white uppercase" style={{ fontFamily: 'var(--font-display)' }}>
+                <svg viewBox="0 0 20 16" fill="currentColor" className="w-5 h-4 shrink-0" aria-hidden="true"><path d="M0 0h12l8 8-8 8H0l8-8L0 0z" /></svg>
+                ONBO
+              </span>
             </Link>
             <p className="text-sm text-gray-500 max-w-xs leading-relaxed mt-2">{t('footer.tagline')}</p>
             <a
@@ -33,8 +39,8 @@ export default function Footer() {
               {t('nav.services')}
             </h4>
             <nav className="flex flex-col gap-3 text-sm text-gray-400">
-              <Link to="/servicios" className="hover:text-white transition-colors">{t('services.dev.title')}</Link>
-              <Link to="/servicios" className="hover:text-white transition-colors">{t('services.consulting.title')}</Link>
+              <button type="button" onClick={() => goToSection('servicios')} className="text-left hover:text-white transition-colors">{t('services.dev.title')}</button>
+              <button type="button" onClick={() => goToSection('servicios')} className="text-left hover:text-white transition-colors">{t('services.consulting.title')}</button>
             </nav>
           </div>
 
@@ -44,8 +50,8 @@ export default function Footer() {
               Empresa
             </h4>
             <nav className="flex flex-col gap-3 text-sm text-gray-400">
-              <Link to="/identidad" className="hover:text-white transition-colors">{t('nav.identity')}</Link>
-              <Link to="/blog" className="hover:text-white transition-colors">{t('nav.blog')}</Link>
+              <button type="button" onClick={() => goToSection('quienes-somos')} className="text-left hover:text-white transition-colors">{t('nav.identity')}</button>
+              <button type="button" onClick={() => goToSection('recursos')} className="text-left hover:text-white transition-colors">{t('nav.blog')}</button>
               <Link to="/contacto" className="hover:text-white transition-colors">{t('nav.contact')}</Link>
             </nav>
           </div>

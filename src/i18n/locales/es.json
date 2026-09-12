@@ -10,11 +10,18 @@
     "close_menu": "Cerrar menú"
   },
   "hero": {
+    "eyebrow": "Estudio técnico · Sevilla",
     "title_line1": "Software e IA construidos",
     "title_line2": "para cómo trabaja tu empresa",
     "subtitle": "Construimos las herramientas que necesitas, con el equipo que te las entrega en persona. Sin intermediarios, sin plazos que se alargan, sin sorpresas en la factura.",
     "cta_primary": "Ver cómo trabajamos",
-    "cta_secondary": "Cuéntanos tu reto"
+    "cta_secondary": "Cuéntanos tu reto",
+    "meta_scope": "Ámbito",
+    "meta_scope_value": "Software a medida",
+    "meta_team": "Equipo",
+    "meta_team_value": "Equipo pequeño, trato directo",
+    "meta_first": "Primera consulta",
+    "meta_first_value": "Sin coste"
   },
   "services": {
     "section_title": "En qué te ayudamos",
@@ -116,6 +123,7 @@
   "contact": {
     "section_title": "Cuéntanoslo",
     "intro": "Escríbenos qué necesitas. Te responde alguien del equipo técnico — no un gestor, no un bot — con una valoración real de si podemos ayudarte y cómo en menos de 48h.",
+    "info_title": "Cómo contactarnos",
     "location_label": "Ubicación",
     "location_value": "España — Sevilla",
     "email_label": "Email",

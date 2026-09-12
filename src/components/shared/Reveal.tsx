@@ -15,6 +15,10 @@ export default function Reveal({ children, delay = 0, className = '', variant = 
   useEffect(() => {
     const el = ref.current
     if (!el) return
+    if (!('IntersectionObserver' in window)) {
+      el.classList.add('reveal-visible')
+      return
+    }
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

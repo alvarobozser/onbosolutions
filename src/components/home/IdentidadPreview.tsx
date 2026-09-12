@@ -49,7 +49,7 @@ export default function IdentidadPreview() {
         <Reveal delay={240} variant="up">
           <div className="mt-8">
             <Link
-              to="/identidad"
+              to="/"
               className="inline-flex items-center gap-2 border border-white/30 text-white text-sm font-semibold px-5 py-2.5 hover:bg-white hover:text-black transition-colors duration-200"
             >
               Conocer al equipo →
