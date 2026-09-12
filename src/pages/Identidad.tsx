@@ -9,12 +9,19 @@ const STATS = [
 ] as const
 
 function useCountUp(target: number, duration = 1200) {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(() => (
+    typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      ? target
+      : 0
+  ))
   const startedRef = useRef(false)
   const ref = useRef<HTMLDivElement>(null)
   useEffect(() => {
     const el = ref.current
     if (!el) return
+    // Respeta prefers-reduced-motion: muestra el valor final sin animar.
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (reduceMotion) return
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting && !startedRef.current) {
         startedRef.current = true
