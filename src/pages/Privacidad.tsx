@@ -40,7 +40,7 @@ export default function Privacidad() {
               <li>Número de teléfono (opcional)</li>
               <li>Mensaje libre</li>
             </ul>
-            <p>No recogemos datos de navegación, no usamos cookies de seguimiento ni instalamos ningún código de analítica de terceros.</p>
+            <p>La analítica opcional de terceros solo se activa después de obtener tu consentimiento explícito, si está configurada.</p>
           </Block>
 
           <Block title="3. Finalidad y base legal">
@@ -88,8 +88,9 @@ export default function Privacidad() {
 
           <Block title="7. Cookies">
             <p>
-              Este sitio web <strong>no utiliza cookies</strong> de analítica ni de seguimiento. No se instala ningún
-              código de terceros que identifique o rastree a los visitantes.
+              Este sitio web no instala analítica de terceros antes de obtener tu consentimiento explícito. Si aceptas la
+              analítica opcional, puede cargarse Google Analytics para medir el uso general del sitio. Esta sección queda
+              sujeta a revisión legal antes de activar un ID real en producción.
             </p>
           </Block>
 

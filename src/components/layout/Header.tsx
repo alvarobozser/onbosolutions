@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useActiveSection } from '../../context/useActiveSection'
+import { trackEvent } from '../../analytics/analytics'
 
 const NAV_LINKS = [
   { labelKey: 'nav.home', sectionId: 'inicio' },
@@ -87,7 +88,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden md:flex items-center">
-            <Link to="/contacto" className="bg-black text-white text-sm font-semibold px-4 py-2 hover:bg-gray-900 transition-colors flex items-center gap-1 focus-visible:outline-2 focus-visible:outline-offset-2">
+            <Link to="/contacto" onClick={() => trackEvent('cta_header')} className="bg-black text-white text-sm font-semibold px-4 py-2 hover:bg-gray-900 transition-colors flex items-center gap-1 focus-visible:outline-2 focus-visible:outline-offset-2">
               {t('nav.cta')} →
             </Link>
           </div>
@@ -114,7 +115,7 @@ export default function Header() {
               </button>
             ))}
             <div className="pt-2 border-t border-black/10">
-              <Link to="/contacto" onClick={() => setMenuOpen(false)} className="bg-black text-white text-sm font-semibold px-4 py-2 inline-block focus-visible:outline-2 focus-visible:outline-offset-2">
+              <Link to="/contacto" onClick={() => { trackEvent('cta_header'); setMenuOpen(false) }} className="bg-black text-white text-sm font-semibold px-4 py-2 inline-block focus-visible:outline-2 focus-visible:outline-offset-2">
                 {t('nav.cta')} →
               </Link>
             </div>

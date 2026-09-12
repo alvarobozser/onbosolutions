@@ -84,8 +84,10 @@ Documento de seguimiento del proyecto. Las tareas estan ordenadas por impacto y 
 
 ### Producto
 
-- Definir analitica solo si existe una necesidad real y un sistema de consentimiento.
-- Medir clics en contacto, envio de formulario y lectura de articulos.
+- Completar el ID real de medicion de Google Analytics cuando proceda.
+- Confirmar el dominio definitivo antes de activar la analitica en produccion.
+- Revisar legalmente cookies, analitica, consentimiento y la politica de privacidad.
+- Medir clics en contacto y envio exitoso del formulario tras consentimiento.
 - Crear una pagina de casos de estudio cuando haya material publicable.
 
 ## Decisiones abiertas

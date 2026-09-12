@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import { useLocation } from 'react-router-dom'
 import Footer from './Footer'
 import Header from './Header'
+import AnalyticsConsent from './AnalyticsConsent'
 import SectionDots from './SectionDots'
 import WhatsAppFAB from './WhatsAppFAB'
 
@@ -21,6 +22,7 @@ export default function Layout({ children }: LayoutProps) {
       <SectionDots />
       <WhatsAppFAB />
       <Footer />
+      <AnalyticsConsent />
     </div>
   )
 }

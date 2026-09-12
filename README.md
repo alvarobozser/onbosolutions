@@ -48,4 +48,7 @@ Copia `.env.example` a `.env` y rellena los valores:
 
 ```env
 VITE_WEB3FORMS_KEY=tu_key_aqui
+VITE_GA_MEASUREMENT_ID=
 ```
+
+`VITE_GA_MEASUREMENT_ID` es opcional. Google Analytics solo se carga cuando existe esta variable y la persona usuaria acepta la analítica en el banner de consentimiento, sujeto a la política de privacidad y a la revisión legal correspondiente.

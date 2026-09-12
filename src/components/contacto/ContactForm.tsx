@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { trackEvent } from '../../analytics/analytics'
 
 type FormStatus = 'idle' | 'loading' | 'success' | 'error'
 type FieldName = 'name' | 'email' | 'interest' | 'phone' | 'message'
@@ -57,6 +58,7 @@ export default function ContactForm() {
         body: formData,
       })
       const data = await res.json() as { success: boolean }
+      if (data.success) trackEvent('contact_form_success')
       setStatus(data.success ? 'success' : 'error')
     } catch {
       setStatus('error')

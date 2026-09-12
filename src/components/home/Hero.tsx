@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
+import { trackEvent } from '../../analytics/analytics'
 
 function scrollToServices() {
   document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })
@@ -93,7 +94,7 @@ export default function Hero() {
               {t('hero.subtitle')}
             </p>
             <div className="hero-line mt-8 flex flex-wrap gap-4">
-              <button type="button" onClick={scrollToServices} className="bg-black text-white font-semibold px-6 py-3 text-sm hover:bg-gray-900 transition-colors flex items-center gap-2">
+              <button type="button" onClick={() => { trackEvent('cta_hero'); scrollToServices() }} className="bg-black text-white font-semibold px-6 py-3 text-sm hover:bg-gray-900 transition-colors flex items-center gap-2">
                 {t('hero.cta_primary')} →
               </button>
               <Link to="/contacto" className="border border-black text-black font-semibold px-6 py-3 text-sm hover:bg-black hover:text-white transition-colors">
