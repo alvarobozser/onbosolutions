@@ -89,15 +89,11 @@ export default function Hero() {
   }
 
   return (
-    <section id="inicio" className="relative surface-warm min-h-screen flex items-center overflow-hidden pb-16">
+    <section id="inicio" className="relative bg-white min-h-screen flex items-center overflow-hidden pb-16">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           <div>
-            <p className="hero-line text-xs sm:text-sm uppercase tracking-widest text-black/80 font-semibold mb-5 flex items-center">
-              <span className="accent-mark" aria-hidden="true" />
-              ONBO · Software + IA
-            </p>
             <h1 className="hero-line text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-black leading-tight tracking-tight">
               {t('hero.title_line1')}<br />
               {t('hero.title_line2')}
@@ -108,13 +104,13 @@ export default function Hero() {
             <div className="hero-line mt-8 flex flex-wrap gap-4">
               <Link
                 to="/servicios"
-                className="btn-accent font-semibold px-6 py-3 text-sm flex items-center gap-2 focus-accent transition-colors"
+                className="bg-black text-white font-semibold px-6 py-3 text-sm hover:bg-gray-900 transition-colors flex items-center gap-2"
               >
                 {t('hero.cta_primary')} →
               </Link>
               <Link
                 to="/contacto"
-                className="border border-black text-black font-semibold px-6 py-3 text-sm hover:bg-black hover:text-white focus-accent transition-colors"
+                className="border border-black text-black font-semibold px-6 py-3 text-sm hover:bg-black hover:text-white transition-colors"
               >
                 {t('hero.cta_secondary')}
               </Link>
@@ -124,29 +120,16 @@ export default function Hero() {
           {/* Logo mark 3D — tilt con el ratón */}
           <div
             ref={shapeRef}
-            className="relative hidden lg:flex items-center justify-center cursor-crosshair"
+            className="hidden lg:flex items-center justify-center cursor-crosshair"
             aria-hidden="true"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
           >
-            {/* Acento geométrico sutil detrás del logo */}
-            <span
-              aria-hidden="true"
-              className="absolute select-none"
-              style={{
-                width: '180px',
-                height: '180px',
-                backgroundColor: 'var(--accent)',
-                transform: 'rotate(-8deg)',
-                opacity: 0.55,
-                zIndex: 0,
-              }}
-            />
             <svg
               viewBox="0 0 20 16"
               fill="black"
-              className="w-[200px] h-[160px] select-none relative"
-              style={{ ...style, zIndex: 1 }}
+              className="w-[200px] h-[160px] select-none"
+              style={style}
             >
               <path d="M0 0h12l8 8-8 8H0l8-8L0 0z" />
             </svg>
