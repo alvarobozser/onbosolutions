@@ -16,7 +16,7 @@ export default function BlogSection() {
     <section id="recursos" className="bg-white">
 
       {/* Header */}
-      <div className="py-12 sm:py-20 border-b border-black/10">
+      <div className="py-8 sm:py-12 border-b border-black/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal variant="left">
             <p className="text-xs uppercase tracking-widest text-gray-400 mb-4">Recursos</p>
@@ -50,7 +50,7 @@ export default function BlogSection() {
       </div>
 
       {/* Grid */}
-      <div className="py-12 sm:py-16 bg-white">
+      <div className="py-8 sm:py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {filtered.map((article, i) => (

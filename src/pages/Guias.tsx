@@ -2,6 +2,7 @@ import { ArrowRight } from 'lucide-react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { type Category, CATEGORIES, type Guia, GUIAS } from '../data/guias'
+import { useMeta } from '../hooks/useMeta'
 
 const PATTERNS: Record<Guia['pattern'], string> = {
   chevrons: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20 L20 0 L40 20 M0 40 L20 20 L40 40' fill='none' stroke='%23000' stroke-width='1' opacity='0.08'/%3E%3C/svg%3E")`,
@@ -38,6 +39,10 @@ function GuiaCard({ guia, lang }: { guia: Guia; lang: string }) {
 }
 
 export default function Guias() {
+  useMeta({
+    title: 'Guías',
+    description: 'Guías prácticas de software, automatización e inteligencia artificial para empresas.',
+  })
   const { t, i18n } = useTranslation()
   const [activeCategory, setActiveCategory] = useState<Category | null>(null)
 

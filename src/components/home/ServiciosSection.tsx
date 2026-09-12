@@ -45,7 +45,7 @@ export default function ServiciosSection() {
   const { t } = useTranslation()
 
   return (
-    <section id="servicios" className="py-16 sm:py-24 bg-white">
+    <section id="servicios" className="py-10 sm:py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal variant="left">
           <p className="text-xs uppercase tracking-widest text-gray-400 mb-4">Servicios</p>

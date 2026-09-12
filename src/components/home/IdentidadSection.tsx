@@ -10,9 +10,9 @@ const VALUES = [
 ] as const
 
 const STATS = [
-  { target: 3,    prefix: '',  suffix: '',  label: 'Personas en el equipo' },
-  { target: 15,   prefix: '+', suffix: '',  label: 'Proyectos entregados'  },
-  { target: 2022, prefix: '',  suffix: '',  label: 'Año de fundación'      },
+  { target: 4,    prefix: '',  suffix: '',  label: 'Personas en el equipo' },
+  { target: 8,   prefix: '+', suffix: '',  label: 'Proyectos entregados'  },
+  { target: 2024, prefix: '',  suffix: '',  label: 'Año de fundación'      },
 ] as const
 
 function useCountUp(target: number, duration = 1200) {
@@ -63,7 +63,7 @@ export default function IdentidadSection() {
     <section id="quienes-somos" className="bg-white">
 
       {/* Header + Stats */}
-      <div className="py-12 sm:py-20 border-b border-black/10">
+      <div className="py-8 sm:py-12 border-b border-black/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal variant="left">
             <p className="text-xs uppercase tracking-widest text-gray-400 mb-4">
@@ -74,7 +74,7 @@ export default function IdentidadSection() {
             </h2>
           </Reveal>
           <Reveal delay={120}>
-            <div className="mt-10 flex flex-col sm:flex-row gap-8 sm:gap-16">
+            <div className="mt-5 flex flex-col sm:flex-row gap-8 sm:gap-16">
               {STATS.map((s) => <StatItem key={s.label} {...s} />)}
             </div>
           </Reveal>
@@ -82,7 +82,7 @@ export default function IdentidadSection() {
       </div>
 
       {/* Narrativa */}
-      <div className="py-12 sm:py-20 bg-white">
+      <div className="py-10 sm:py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
             <Reveal variant="left">
@@ -108,7 +108,7 @@ export default function IdentidadSection() {
       </div>
 
       {/* Valores */}
-      <div className="bg-black text-white py-12 sm:py-16">
+      <div className="bg-black text-white py-8 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal variant="left">
             <p className="text-xs uppercase tracking-widest text-gray-500 mb-8 sm:mb-10">Cómo trabajamos</p>
@@ -128,7 +128,7 @@ export default function IdentidadSection() {
       </div>
 
       {/* Equipo */}
-      <div className="py-12 sm:py-20 bg-white">
+      <div className="py-10 sm:py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal variant="up">
             <div className="border-2 border-black p-6 sm:p-8 lg:p-12 max-w-3xl">

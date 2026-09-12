@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alvarobozser.github.io/onbosolutions/sitemap.xml

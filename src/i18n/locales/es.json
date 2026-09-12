@@ -5,7 +5,9 @@
     "identity": "Quiénes somos",
     "contact": "Contacto",
     "blog": "Blog",
-    "cta": "Contacto"
+    "cta": "Contacto",
+    "open_menu": "Abrir menú",
+    "close_menu": "Cerrar menú"
   },
   "hero": {
     "title_line1": "Software e IA construidos",
@@ -100,6 +102,17 @@
     "q5": "¿Trabajáis en remoto?",
     "a5": "Sí. Somos un equipo basado en Sevilla pero trabajamos con clientes de cualquier parte de España. Las reuniones de seguimiento son por videollamada y nos adaptamos a tu horario."
   },
+  "guides": {
+    "section_title": "Guías prácticas",
+    "see_all": "Ver todas las guías",
+    "categories": {
+      "ia": "IA aplicada",
+      "backend": "Backend",
+      "arquitectura": "Arquitectura",
+      "financiacion": "Financiación",
+      "digital": "Transformación digital"
+    }
+  },
   "contact": {
     "section_title": "Cuéntanoslo",
     "intro": "Escríbenos qué necesitas. Te responde alguien del equipo técnico — no un gestor, no un bot — con una valoración real de si podemos ayudarte y cómo en menos de 48h.",
@@ -120,7 +133,14 @@
       "submit": "Enviar mensaje",
       "sending": "Enviando...",
       "success": "Mensaje recibido. Te responde el equipo técnico en menos de 48h.",
-      "error": "Algo salió mal. Inténtalo de nuevo o escríbenos directamente."
+      "error": "Algo salió mal. Inténtalo de nuevo o escríbenos directamente.",
+      "not_configured": "Formulario no configurado. El envío está desactivado hasta añadir VITE_WEB3FORMS_KEY.",
+      "validation": {
+        "required": "Este campo es obligatorio.",
+        "email": "Introduce un email válido.",
+        "phone": "Introduce un teléfono válido.",
+        "too_long": "El texto supera la longitud permitida."
+      }
     }
   },
   "footer": {

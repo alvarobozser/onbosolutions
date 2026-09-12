@@ -1,5 +1,6 @@
 import { Mail, MapPin, Phone } from 'lucide-react'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import ContactForm from '../components/contacto/ContactForm'
 import Accordion from '../components/shared/Accordion'
@@ -61,9 +62,9 @@ export default function Contacto() {
             </div>
 
             <div className="mt-10">
-              <a href="/privacy" className="text-xs text-gray-400 hover:text-black transition-colors underline">
+              <Link to="/privacidad" className="text-xs text-gray-400 hover:text-black transition-colors underline">
                 {t('contact.privacy')}
-              </a>
+              </Link>
             </div>
           </div>
 

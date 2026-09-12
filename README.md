@@ -5,7 +5,7 @@
 - React 19 + Vite 8 + TypeScript (strict)
 - Tailwind CSS v4
 - react-router-dom v7 (HashRouter)
-- react-i18next — ES / EN
+- react-i18next — ES (único idioma disponible actualmente)
 - Package manager: **pnpm**
 
 ## Desarrollo local
@@ -21,6 +21,13 @@ pnpm dev
 ```bash
 pnpm build
 pnpm preview
+```
+
+## Tests
+
+```bash
+pnpm test:run
+pnpm lint
 ```
 
 ## Deploy — GitHub Pages

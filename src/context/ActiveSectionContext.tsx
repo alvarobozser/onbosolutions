@@ -1,16 +1,5 @@
-import { createContext, useContext, useState, type ReactNode } from 'react'
-
-type Section = 'home' | 'servicios' | 'quienes-somos' | 'recursos' | null
-
-interface ActiveSectionCtx {
-  activeSection: Section
-  setActiveSection: (s: Section) => void
-}
-
-const ActiveSectionContext = createContext<ActiveSectionCtx>({
-  activeSection: null,
-  setActiveSection: () => {},
-})
+import { useState, type ReactNode } from 'react'
+import { ActiveSectionContext, type Section } from './activeSectionContextValue'
 
 export function ActiveSectionProvider({ children }: { children: ReactNode }) {
   const [activeSection, setActiveSection] = useState<Section>(null)
@@ -19,8 +8,4 @@ export function ActiveSectionProvider({ children }: { children: ReactNode }) {
       {children}
     </ActiveSectionContext.Provider>
   )
-}
-
-export function useActiveSection() {
-  return useContext(ActiveSectionContext)
 }

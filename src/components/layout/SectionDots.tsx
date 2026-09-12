@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom'
-import { useActiveSection } from '../../context/ActiveSectionContext'
+import { useActiveSection } from '../../context/useActiveSection'
 
 const DOTS = [
   { id: 'inicio',        label: 'Inicio',        section: 'home'          },

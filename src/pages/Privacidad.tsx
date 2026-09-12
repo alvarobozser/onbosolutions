@@ -1,11 +1,17 @@
 import { Link } from 'react-router-dom'
 import { CONTACT_EMAIL } from '../config/constants'
+import { useMeta } from '../hooks/useMeta'
 
 const LAST_UPDATED = '31 de agosto de 2025'
 const COMPANY     = 'ONBO Solutions'
 const EMAIL       = CONTACT_EMAIL
 
 export default function Privacidad() {
+  useMeta({
+    title: 'Política de privacidad',
+    description: 'Información sobre el tratamiento de datos personales en ONBO Solutions.',
+  })
+
   return (
     <main className="bg-white">
       <section className="py-20 border-b border-black/10">

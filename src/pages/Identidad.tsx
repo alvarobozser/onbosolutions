@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next'
 import { useMeta } from '../hooks/useMeta'
 
 const STATS = [
-  { target: 3,    prefix: '',  suffix: '',  label: 'Personas en el equipo' },
-  { target: 15,   prefix: '+', suffix: '',  label: 'Proyectos entregados'  },
-  { target: 2022, prefix: '',  suffix: '',  label: 'Año de fundación'      },
+  { target: 4,    prefix: '',  suffix: '',  label: 'Personas en el equipo' },
+  { target: 8,   prefix: '+', suffix: '',  label: 'Proyectos entregados'  },
+  { target: 2024, prefix: '',  suffix: '',  label: 'Año de fundación'      },
 ] as const
 
 function useCountUp(target: number, duration = 1200) {

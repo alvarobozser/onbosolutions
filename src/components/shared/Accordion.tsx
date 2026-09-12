@@ -24,22 +24,18 @@ export default function Accordion({ items, defaultOpenIndex = 0 }: AccordionProp
         return (
           <div key={index}>
             <button
+              type="button"
               onClick={() => toggle(index)}
               className="w-full flex items-start justify-between py-5 text-left gap-4"
               aria-expanded={isOpen}
+              aria-controls={`accordion-panel-${index}`}
             >
               <span className="text-sm font-semibold text-black">{item.question}</span>
               <span className="text-lg leading-none text-gray-400 shrink-0 mt-0.5">
                 {isOpen ? '−' : '+'}
               </span>
             </button>
-            <div
-              style={{
-                maxHeight: isOpen ? '500px' : '0',
-                overflow: 'hidden',
-                transition: 'max-height 0.3s ease',
-              }}
-            >
+            <div id={`accordion-panel-${index}`} role="region" hidden={!isOpen}>
               <p className="pb-5 text-sm text-gray-600 leading-relaxed">{item.answer}</p>
             </div>
           </div>

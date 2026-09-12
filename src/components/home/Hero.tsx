@@ -12,6 +12,8 @@ export default function Hero() {
   const tiltRef = useRef({ x: 0, y: 0 })
   const targetRef = useRef({ x: 0, y: 0 })
   const rafRef = useRef<number>(0)
+  const animationRunningRef = useRef(false)
+  const reducedMotionRef = useRef(false)
   const [style, setStyle] = useState<React.CSSProperties>({})
   const [scrolled, setScrolled] = useState(false)
 
@@ -22,6 +24,26 @@ export default function Hero() {
   }, [])
 
   useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    reducedMotionRef.current = mediaQuery.matches
+    const onPreferenceChange = () => {
+      reducedMotionRef.current = mediaQuery.matches
+      if (mediaQuery.matches) {
+        cancelAnimationFrame(rafRef.current)
+        animationRunningRef.current = false
+        setStyle({})
+      }
+    }
+    mediaQuery.addEventListener('change', onPreferenceChange)
+    return () => {
+      mediaQuery.removeEventListener('change', onPreferenceChange)
+      cancelAnimationFrame(rafRef.current)
+    }
+  }, [])
+
+  function startTiltAnimation() {
+    if (reducedMotionRef.current || animationRunningRef.current) return
+    animationRunningRef.current = true
     const tick = () => {
       const lerpFactor = 0.07
       tiltRef.current.x += (targetRef.current.x - tiltRef.current.x) * lerpFactor
@@ -40,12 +62,15 @@ export default function Hero() {
         transformOrigin: '50% 50%',
       })
 
+      const settled = Math.abs(targetRef.current.x - x) < 0.001 && Math.abs(targetRef.current.y - y) < 0.001
+      if (settled) {
+        animationRunningRef.current = false
+        return
+      }
       rafRef.current = requestAnimationFrame(tick)
     }
-
     rafRef.current = requestAnimationFrame(tick)
-    return () => cancelAnimationFrame(rafRef.current)
-  }, [])
+  }
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!shapeRef.current) return
@@ -56,6 +81,7 @@ export default function Hero() {
       x: Math.max(-1, Math.min(1, (e.clientX - cx) / (r.width * 0.8))),
       y: Math.max(-1, Math.min(1, (e.clientY - cy) / (r.height * 0.8))),
     }
+    startTiltAnimation()
   }
 
   const handleMouseLeave = () => {
