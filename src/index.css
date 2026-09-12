@@ -65,16 +65,6 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 4px var(--accent-shadow);
 }
 
-/* Pequeña marca cuadrada lima para eyebrow/activo */
-.accent-mark {
-  display: inline-block;
-  width: 0.6rem;
-  height: 0.6rem;
-  background-color: var(--accent);
-  margin-right: 0.6rem;
-  vertical-align: middle;
-}
-
 /* Botón con acento: lime + texto oscuro, oscurece ligeramente al pasar por encima */
 .btn-accent {
   background-color: var(--accent);

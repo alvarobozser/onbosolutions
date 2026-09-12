@@ -45,18 +45,8 @@ export default function Header() {
 
   function navClass(active: boolean) {
     return active
-      ? 'text-black font-semibold'
+      ? 'text-black font-semibold underline decoration-2 underline-offset-8'
       : 'text-gray-600 hover:text-black transition-colors'
-  }
-
-  function activeIndicator() {
-    return (
-      <span
-        aria-hidden="true"
-        className="inline-block w-1.5 h-1.5 mr-1.5 align-middle"
-        style={{ backgroundColor: 'var(--accent)' }}
-      />
-    )
   }
 
   function isSectionActive(sectionId: string) {
@@ -94,7 +84,6 @@ export default function Header() {
                   aria-current={isSectionActive(sectionId) ? 'page' : undefined}
                   className={`${navClass(isSectionActive(sectionId))} focus-visible:outline-2 focus-visible:outline-offset-4`}
                 >
-                  {isSectionActive(sectionId) && activeIndicator()}
                   {t(labelKey)}
                 </button>
               ) : (
@@ -104,12 +93,7 @@ export default function Header() {
                   end={to === '/'}
                   className={({ isActive }) => `${navClass(isActive)} focus-visible:outline-2 focus-visible:outline-offset-4`}
                 >
-                  {({ isActive }) => (
-                    <>
-                      {isActive && activeIndicator()}
-                      {t(labelKey)}
-                    </>
-                  )}
+                  {t(labelKey)}
                 </NavLink>
               )
             )}
@@ -135,7 +119,6 @@ export default function Header() {
                     }
                   }}
                 >
-                  {isSectionActive('servicios') && activeIndicator()}
                   {t('nav.services')} <span className="text-xs">▾</span>
                 </button>
               ) : (
@@ -154,12 +137,7 @@ export default function Header() {
                     }
                   }}
                 >
-                  {({ isActive }) => (
-                    <>
-                      {isActive && activeIndicator()}
-                      {t('nav.services')} <span className="text-xs">▾</span>
-                    </>
-                  )}
+                  {t('nav.services')} <span className="text-xs">▾</span>
                 </NavLink>
               )}
               {servicesOpen && (
@@ -221,7 +199,6 @@ export default function Header() {
                   aria-current={isSectionActive(sectionId) ? 'page' : undefined}
                   className={`w-full text-left flex items-center ${navClass(isSectionActive(sectionId))} focus-visible:outline-2 focus-visible:outline-offset-4`}
                 >
-                  {isSectionActive(sectionId) && activeIndicator()}
                   {t(labelKey)}
                 </button>
               ) : (
@@ -232,12 +209,7 @@ export default function Header() {
                   onClick={() => setMenuOpen(false)}
                   className={({ isActive }) => `${navClass(isActive)} focus-visible:outline-2 focus-visible:outline-offset-4`}
                 >
-                  {({ isActive }) => (
-                    <span className="flex items-center">
-                      {isActive && activeIndicator()}
-                      {t(labelKey)}
-                    </span>
-                  )}
+                  {t(labelKey)}
                 </NavLink>
               )
             )}
@@ -247,7 +219,6 @@ export default function Header() {
                 aria-current={isSectionActive('servicios') ? 'page' : undefined}
                 className={`w-full text-left flex items-center ${navClass(isSectionActive('servicios'))} focus-visible:outline-2 focus-visible:outline-offset-4`}
               >
-                {isSectionActive('servicios') && activeIndicator()}
                 {t('nav.services')}
               </button>
             ) : (
@@ -256,12 +227,7 @@ export default function Header() {
                 onClick={() => setMenuOpen(false)}
                 className={({ isActive }) => `${navClass(isActive)} focus-visible:outline-2 focus-visible:outline-offset-4`}
               >
-                {({ isActive }) => (
-                  <span className="flex items-center">
-                    {isActive && activeIndicator()}
-                    {t('nav.services')}
-                  </span>
-                )}
+                {t('nav.services')}
               </NavLink>
             )}
             <div className="pt-2 border-t border-black/10">
