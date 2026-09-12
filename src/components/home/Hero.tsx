@@ -135,7 +135,7 @@ export default function Hero() {
         />
         {/* Pequeña marca cuadrada lima en movimiento vertical */}
         <span
-          className="float-y absolute rounded-full"
+          className="float-y absolute"
           style={{
             top: '20%',
             left: '48%',
@@ -151,7 +151,8 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           <div>
-            <p className="hero-line text-xs sm:text-sm uppercase tracking-widest text-black/80 font-semibold mb-5">
+            <p className="hero-line text-xs sm:text-sm uppercase tracking-widest text-black/80 font-semibold mb-5 flex items-center">
+              <span className="accent-mark" aria-hidden="true" />
               ONBO · Software + IA
             </p>
             <h1 className="hero-line text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-black leading-tight tracking-tight">

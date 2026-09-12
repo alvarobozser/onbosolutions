@@ -30,7 +30,7 @@ function CardLeft({
       <ul className="mt-6 space-y-2">
         {details.map((d) => (
           <li key={d} className="flex items-start gap-2 text-sm text-gray-700">
-            <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full" style={{ backgroundColor: 'var(--accent)' }} />
+            <span aria-hidden="true" className="mt-1.5 shrink-0" style={{ width: '0.5rem', height: '0.5rem', backgroundColor: 'var(--accent)' }} />
             <span>{d}</span>
           </li>
         ))}

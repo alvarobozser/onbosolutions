@@ -36,7 +36,7 @@ export default function CTABanner() {
           }}
         />
         <span
-          className="float-y absolute hidden rounded-full lg:block"
+          className="float-y absolute hidden lg:block"
           style={{
             top: '24%',
             left: '14%',

@@ -13,6 +13,10 @@ function ChevronBreak() {
       className="flex justify-center items-center py-3 bg-white border-y border-black/5"
       aria-hidden="true"
     >
+      <span
+        className="inline-block w-1.5 h-1.5 mr-2"
+        style={{ backgroundColor: 'var(--accent)' }}
+      />
       <svg viewBox="0 0 20 16" fill="currentColor" className="w-5 h-4 text-black opacity-[0.08]">
         <path d="M0 0h12l8 8-8 8H0l8-8L0 0z" />
       </svg>
