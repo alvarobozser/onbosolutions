@@ -86,67 +86,10 @@ export default function Hero() {
 
   const handleMouseLeave = () => {
     targetRef.current = { x: 0, y: 0 }
-    startTiltAnimation()
   }
 
   return (
-    <section id="inicio" className="relative surface-warm min-h-screen flex items-center overflow-hidden pb-16 noise-subtle">
-      {/* Capa 1: grid técnico de fondo */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 tech-grid opacity-60 pointer-events-none"
-      />
-      {/* Capa 2: crosshair central sutil (líneas guía) */}
-      <div
-        aria-hidden="true"
-        className="hidden lg:block absolute inset-0 guide-crosshair pointer-events-none"
-      />
-      {/* Capa 3: diamantes rotando lentamente a distintas profundidades */}
-      <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
-        <span
-          className="hero-diamond absolute border border-black/10"
-          style={{
-            top: '12%',
-            right: '8%',
-            width: '160px',
-            height: '160px',
-            transform: 'rotate(45deg)',
-          }}
-        />
-        <span
-          className="hero-diamond-reverse absolute border border-black/8"
-          style={{
-            bottom: '14%',
-            left: '6%',
-            width: '90px',
-            height: '90px',
-            transform: 'rotate(45deg)',
-          }}
-        />
-        <span
-          className="hero-diamond-slow absolute border border-black/5 hidden md:block"
-          style={{
-            top: '52%',
-            right: '38%',
-            width: '220px',
-            height: '220px',
-            transform: 'rotate(45deg)',
-          }}
-        />
-        {/* Pequeña marca cuadrada lima en movimiento vertical */}
-        <span
-          className="float-y absolute"
-          style={{
-            top: '20%',
-            left: '48%',
-            width: '10px',
-            height: '10px',
-            backgroundColor: 'var(--accent)',
-            transform: 'rotate(45deg)',
-          }}
-        />
-      </div>
-
+    <section id="inicio" className="relative surface-warm min-h-screen flex items-center overflow-hidden pb-16">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
