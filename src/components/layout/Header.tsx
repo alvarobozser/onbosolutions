@@ -22,6 +22,7 @@ export default function Header() {
   const location = useLocation()
   const isHome = location.pathname === '/'
   const [scrolled, setScrolled] = useState(() => !isHome || (typeof window !== 'undefined' && window.scrollY > 60))
+  const isHeaderVisible = !isHome || scrolled
 
   useEffect(() => {
     if (!isHome) return
@@ -54,7 +55,7 @@ export default function Header() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 bg-white border-b border-black/10 transition-transform duration-300 ease-out ${
-      scrolled ? 'translate-y-0' : '-translate-y-full'
+      isHeaderVisible ? 'translate-y-0' : '-translate-y-full'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
